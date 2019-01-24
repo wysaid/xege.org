@@ -1,0 +1,2 @@
+此目录里面的东西
+复制到 C:\Program Files (x86)\Microsoft Visual Studio\2017\<Community/Profeccsional/Enterprise>\VC\Tools\MSVC\<版本号>\lib 目录下
