@@ -1,0 +1,4 @@
+把ege文件夹 ege.h 和 graphics.h 覆盖以下文件夹即可
+
+vs2017
+lib 复制到 C:\Program Files (x86)\Microsoft Visual Studio\2017\<Community/Profeccsional/Enterprise>\VC\Tools\MSVC\<版本号>\include 目录下
