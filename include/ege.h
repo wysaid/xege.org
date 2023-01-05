@@ -9,25 +9,25 @@
 * E-Mail:       mailto:misakamm[at gmail com]
 *
 * FileName: ege.h
-* åœ¨ VC ä¸‹æ¨¡æ‹Ÿ Borland BGI ç»˜å›¾åº“ï¼Œå®ç°ç®€å•çš„ç»˜å›¾ä¹‹ä½™ï¼Œæ‰©å±•äº†è¾ƒå¤æ‚çš„ç»˜å›¾èƒ½åŠ›
+* ÔÚ VC ÏÂÄ£Äâ Borland BGI »æÍ¼¿â£¬ÊµÏÖ¼òµ¥µÄ»æÍ¼Ö®Óà£¬À©Õ¹ÁË½Ï¸´ÔÓµÄ»æÍ¼ÄÜÁ¦
 *
-* åŒ…å«å¹¶ä½¿ç”¨æœ¬åº“æ—¶ï¼Œä¸è¦åŒ…å«conio.hå¤´æ–‡ä»¶
-* è¿™äº›å¤´æ–‡ä»¶ä¸åº”å…±å­˜ï¼Œå¦åˆ™å¯èƒ½ä¼šç¼–è¯‘é”™è¯¯ï¼Œ
-* æˆ–è€…getchè¢«conio.hå†…çš„è¦†ç›–ï¼ˆç”±åŒ…å«æ¬¡åºå†³å®šï¼‰ï¼Œè¯·æ³¨æ„
-* å¦‚éœ€å…±å­˜ï¼Œè¯·ä½¿ç”¨å¤šæ–‡ä»¶åˆ†å¼€åŒ…å«çš„æ¨¡å¼ä½¿ç”¨ï¼Œ
-* å³ä¸èƒ½ä¸€ä¸ªcppåŒæ—¶åŒ…å«ï¼Œä½†å¯ä»¥åˆ†å¼€åŒ…å«
-* ä½¿ç”¨æœ¬åº“ï¼Œå¿…é¡»ç”¨C++ç¼–è¯‘ï¼Œå¯æ”¯æŒçš„ç¼–è¯‘å™¨ï¼š
+* °üº¬²¢Ê¹ÓÃ±¾¿âÊ±£¬²»Òª°üº¬conio.hÍ·ÎÄ¼ş
+* ÕâĞ©Í·ÎÄ¼ş²»Ó¦¹²´æ£¬·ñÔò¿ÉÄÜ»á±àÒë´íÎó£¬
+* »òÕßgetch±»conio.hÄÚµÄ¸²¸Ç£¨ÓÉ°üº¬´ÎĞò¾ö¶¨£©£¬Çë×¢Òâ
+* ÈçĞè¹²´æ£¬ÇëÊ¹ÓÃ¶àÎÄ¼ş·Ö¿ª°üº¬µÄÄ£Ê½Ê¹ÓÃ£¬
+* ¼´²»ÄÜÒ»¸öcppÍ¬Ê±°üº¬£¬µ«¿ÉÒÔ·Ö¿ª°üº¬
+* Ê¹ÓÃ±¾¿â£¬±ØĞëÓÃC++±àÒë£¬¿ÉÖ§³ÖµÄ±àÒëÆ÷£º
 * VC6/VC2008/VC2010/VC2012/VC2013/MinGW3.4.5/MinGW4.7.1/MinGW4.8.1
 *********************************************************/
 
 /****************************************************************************
-** æ³¨æ„äº‹é¡¹ï¼š
-* â˜…å¦‚æœéœ€è¦æ˜¾ç¤ºæ§åˆ¶å°çª—å£ï¼Œè¯·åœ¨åŒ…å«æœ¬æ–‡ä»¶çš„å‰é¢åŠ ä¸€è¡Œdefine SHOW_CONSOLE
-* â˜…è°ƒç”¨Sleepè¿™ä¸ªAPIæ—¶ï¼Œæˆ–è€…è°ƒç”¨delayï¼Œå®é™…å‡ä¼šè½¬åŒ–ä¸ºè°ƒç”¨delay_msï¼Œå¦‚å¿…éœ€è°ƒç”¨APIè¯·ä½¿ç”¨api_sleep
-* â˜…delay_ms(0)èƒ½è‡ªè¡Œåˆ¤æ–­æœ‰æ²¡æœ‰æ›´æ–°çš„å¿…è¦ï¼Œè¿ç»­å¤šæ¬¡ä½†ä¸å¤§é‡çš„è°ƒç”¨å¹¶ä¸ä¼šäº§ç”Ÿå¸§ç‡çš„å½±å“
-* â˜…è°ƒç”¨delay_ms, delay_fps, getch, getkey, getmouse æ—¶ï¼Œçª—å£å†…å®¹å¯èƒ½ä¼šæ›´æ–°ï¼Œè¿™äº›å‡½æ•°ç›¸å½“äºå†…ç½®äº†delay_ms(0)ï¼Œ
-*   å¦‚æœä½ åªéœ€è¦æ›´æ–°çª—å£ï¼Œè€Œä¸æƒ³ç­‰å¾…ï¼Œå¯ä»¥ç”¨delay_ms(0)ã€‚æ³¨æ„delayåªå»¶æ—¶è€Œä¸æ›´æ–°çª—å£
-* â˜…åˆç†åœ°ä½¿ç”¨delay_ms/delay_fpså‡½æ•°ï¼Œå¯ä»¥å‡å°‘ä½ çš„ç¨‹åºå ç”¨çš„CPUï¼Œå¦åˆ™ä¸€ä¸ªéƒ½æ²¡æœ‰è°ƒç”¨åŒæ—¶ä¹Ÿæ²¡æœ‰getch/getmouseçš„è¯ï¼Œç¨‹åºå°†å æ»¡ä¸€ä¸ªCPUçš„æ—¶é—´
+** ×¢ÒâÊÂÏî£º
+* ¡ïÈç¹ûĞèÒªÏÔÊ¾¿ØÖÆÌ¨´°¿Ú£¬ÇëÔÚ°üº¬±¾ÎÄ¼şµÄÇ°Ãæ¼ÓÒ»ĞĞdefine SHOW_CONSOLE
+* ¡ïµ÷ÓÃSleepÕâ¸öAPIÊ±£¬»òÕßµ÷ÓÃdelay£¬Êµ¼Ê¾ù»á×ª»¯Îªµ÷ÓÃdelay_ms£¬Èç±ØĞèµ÷ÓÃAPIÇëÊ¹ÓÃapi_sleep
+* ¡ïdelay_ms(0)ÄÜ×ÔĞĞÅĞ¶ÏÓĞÃ»ÓĞ¸üĞÂµÄ±ØÒª£¬Á¬Ğø¶à´Îµ«²»´óÁ¿µÄµ÷ÓÃ²¢²»»á²úÉúÖ¡ÂÊµÄÓ°Ïì
+* ¡ïµ÷ÓÃdelay_ms, delay_fps, getch, getkey, getmouse Ê±£¬´°¿ÚÄÚÈİ¿ÉÄÜ»á¸üĞÂ£¬ÕâĞ©º¯ÊıÏàµ±ÓÚÄÚÖÃÁËdelay_ms(0)£¬
+*   Èç¹ûÄãÖ»ĞèÒª¸üĞÂ´°¿Ú£¬¶ø²»ÏëµÈ´ı£¬¿ÉÒÔÓÃdelay_ms(0)¡£×¢ÒâdelayÖ»ÑÓÊ±¶ø²»¸üĞÂ´°¿Ú
+* ¡ïºÏÀíµØÊ¹ÓÃdelay_ms/delay_fpsº¯Êı£¬¿ÉÒÔ¼õÉÙÄãµÄ³ÌĞòÕ¼ÓÃµÄCPU£¬·ñÔòÒ»¸ö¶¼Ã»ÓĞµ÷ÓÃÍ¬Ê±Ò²Ã»ÓĞgetch/getmouseµÄ»°£¬³ÌĞò½«Õ¼ÂúÒ»¸öCPUµÄÊ±¼ä
 ****************************************************************************/
 
 #ifndef _EGE_H_
@@ -35,20 +35,6 @@
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
-#endif
-
-#ifdef _GRAPH_LIB_BUILD_
-#ifndef WINVER
-#define WINVER 0x0400           // Specifies that the minimum required platform is Windows 95/NT4.
-#endif
-
-#ifndef _WIN32_WINNT
-#define _WIN32_WINNT 0x0400     // Specifies that the minimum required platform is Windows 95/NT4.
-#endif
-
-#ifndef _WIN32_WINDOWS
-#define _WIN32_WINDOWS 0x0410   // Specifies that the minimum required platform is Windows 98.
-#endif
 #endif
 
 #ifndef __cplusplus
@@ -71,46 +57,11 @@
 
 #if !defined(_GRAPH_LIB_BUILD_) && !defined(_GRAPH_NO_LIB_)
 #	ifdef _MSC_VER
+#		pragma comment(lib,"gdiplus.lib")
 #		ifdef _WIN64 // 64 bit libs
-#			if (_MSC_VER >= 1923)
-#				pragma comment(lib,"graphics1964.lib")
-#			elif (_MSC_VER >= 1910)
-#				pragma comment(lib,"graphics1764.lib")
-#			elif (_MSC_VER >= 1900)
-#				pragma comment(lib,"graphics1564.lib")
-#			elif (_MSC_VER >= 1800)
-#				pragma comment(lib,"graphics1364.lib")
-#			elif (_MSC_VER >= 1700)
-#				pragma comment(lib,"graphics1264.lib")
-#			elif (_MSC_VER >= 1600)
-#				pragma comment(lib,"graphics1064.lib")
-#			elif (_MSC_VER >= 1500)
-#				pragma comment(lib,"graphics0864.lib")
-#			elif (_MSC_VER > 1200)
-#				pragma comment(lib,"graphics05.lib")
-#			else
-#				pragma comment(lib,"graphics.lib")
-#			endif
+#			pragma comment(lib,"graphics64.lib")
 #		else   // 32 bit libs
-#			if (_MSC_VER >= 1923)
-#				pragma comment(lib,"graphics19.lib")
-#			elif (_MSC_VER >= 1910)
-#				pragma comment(lib,"graphics17.lib")
-#			elif (_MSC_VER >= 1900)
-#				pragma comment(lib,"graphics15.lib")
-#			elif (_MSC_VER >= 1800)
-#				pragma comment(lib,"graphics13.lib")
-#			elif (_MSC_VER >= 1700)
-#				pragma comment(lib,"graphics12.lib")
-#			elif (_MSC_VER >= 1600)
-#				pragma comment(lib,"graphics10.lib")
-#			elif (_MSC_VER >= 1500)
-#				pragma comment(lib,"graphics08.lib")
-#			elif (_MSC_VER > 1200)
-#				pragma comment(lib,"graphics05.lib")
-#			else
-#				pragma comment(lib,"graphics.lib")
-#			endif
+#			pragma comment(lib,"graphics.lib")
 #		endif
 #	endif
 #endif
@@ -139,19 +90,8 @@
 #	define GWLP_WNDPROC        GWL_WNDPROC
 #endif
 
-#if !defined(_GRAPH_LIB_BUILD_) && !defined(_GRAPH_NO_LIB_)
-#if defined(_MSC_VER) && _MSC_VER > 1200
-//#	pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' ""version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
-#endif
-#endif
-
-
 #ifndef WM_MOUSEWHEEL
 #define WM_MOUSEWHEEL                   0x020A
-#endif
-
-#ifdef _GRAPH_LIB_BUILD_
-#include <cstdio>
 #endif
 
 #ifndef _Cdecl
@@ -180,9 +120,7 @@
 #	endif
 #endif
 
-#ifdef _GRAPH_LIB_BUILD_
-#	define EGE_DEPRECATE(text)
-#else
+#ifndef EGE_DEPRECATE
 #	ifdef _MSC_VER
 #		ifdef _CRT_DEPRECATE_TEXT
 #			define EGE_DEPRECATE(text) _CRT_DEPRECATE_TEXT("This function is deprecated, more info visit http://tcgraphics.sourceforge.net/")
@@ -194,20 +132,19 @@
 #	endif
 #endif
 
-#define SHOWCONSOLE             1       // è¿›å…¥å›¾å½¢æ¨¡å¼æ—¶ï¼Œä¿ç•™æ§åˆ¶å°çš„æ˜¾ç¤º
-#define RGBTOBGR(color)         ((((color) & 0xFF) << 16) | (((color) & 0xFF0000) >> 16) | ((color) & 0xFF00FF00))
-#define EGERGB(r, g, b)         ( ((r)<<16) | ((g)<<8) | (b))
+#define SHOWCONSOLE             1       // ½øÈëÍ¼ĞÎÄ£Ê½Ê±£¬±£Áô¿ØÖÆÌ¨µÄÏÔÊ¾
 #define EGERGBA(r, g, b, a)     ( ((r)<<16) | ((g)<<8) | (b) | ((a)<<24) )
-#define EGEARGB(a, r, g, b)     ( ((r)<<16) | ((g)<<8) | (b) | ((a)<<24) )
+#define EGERGB(r, g, b)         EGERGBA(r, g, b, 0xFF)
+#define EGEARGB(a, r, g, b)     EGERGBA(r, g, b, a)
 #define EGEACOLOR(a, color)     ( ((color) & 0xFFFFFF) | ((a)<<24) )
-#define EGECOLORA(color, a)     ( ((color) & 0xFFFFFF) | ((a)<<24) )
+#define EGECOLORA(color, a)     EGEACOLOR(a, color)
 #define EGEGET_R(c)             ( ((c)>>16) & 0xFF )
 #define EGEGET_G(c)             ( ((c)>> 8) & 0xFF )
 #define EGEGET_B(c)             ( ((c)) & 0xFF )
 #define EGEGET_A(c)             ( ((c)>>24) & 0xFF )
-#define EGEGRAY(gray)           ( ((gray)<<16) | ((gray)<<8) | (gray))
-#define EGEGRAYA(gray, a)       ( ((gray)<<16) | ((gray)<<8) | (gray) | ((a)<<24) )
-#define EGEAGRAY(a, gray)       ( ((gray)<<16) | ((gray)<<8) | (gray) | ((a)<<24) )
+#define EGEGRAY(gray)           EGERGB(gray, gray, gray)
+#define EGEGRAYA(gray, a)       EGERGBA(gray, gray, gray, a)
+#define EGEAGRAY(a, gray)       EGEGRAYA(gray, a)
 #define NAMESPACE_EGE_L         namespace ege {
 #define NAMESPACE_EGE_R         }
 
@@ -296,9 +233,9 @@ enum message_mouse {
 	MSG_MOUSE_MID       = 0x04,
 };
 
-// é¢œè‰²
+// ÑÕÉ«
 enum COLORS {
-	BLACK           = 0,
+	BLACK           = EGERGB(0, 0, 0),
 	BLUE            = EGERGB(0, 0, 0xA8),
 	GREEN           = EGERGB(0, 0xA8, 0),
 	CYAN            = EGERGB(0, 0xA8, 0xA8),
@@ -316,7 +253,7 @@ enum COLORS {
 	WHITE           = EGERGB(0xFC, 0xFC, 0xFC),
 };
 
-// å¡«å……æ¨¡å¼
+// Ìî³äÄ£Ê½
 enum fill_patterns {/* Fill patterns for get/setfillstyle */
 	EMPTY_FILL,     /* fills area in background color */
 	SOLID_FILL,     /* fills area in solid fill color */
@@ -375,18 +312,15 @@ enum music_state_flag {
 };
 
 enum initmode_flag {
+	INIT_DEFAULT        = 0x0,
 	INIT_NOBORDER       = 0x1,
 	INIT_CHILD          = 0x2,
 	INIT_TOPMOST        = 0x4,
 	INIT_RENDERMANUAL   = 0x8,
 	INIT_NOFORCEEXIT    = 0x10,
+	INIT_UNICODE        = 0x20,
 	INIT_WITHLOGO       = 0x100,
-#if defined(_DEBUG) || defined(DEBUG)
-	INIT_DEFAULT    = 0x0,
-#else
-	INIT_DEFAULT    = INIT_WITHLOGO,
-#endif
-	INIT_ANIMATION  = INIT_DEFAULT | INIT_RENDERMANUAL | INIT_NOFORCEEXIT,
+	INIT_ANIMATION      = INIT_DEFAULT | INIT_RENDERMANUAL | INIT_NOFORCEEXIT,
 };
 
 enum rendermode_e {
@@ -452,6 +386,13 @@ typedef enum key_code_e {
 	key_num7        = 0x67,
 	key_num8        = 0x68,
 	key_num9        = 0x69,
+
+	key_multiply    = 0x6a,
+	key_add         = 0x6b,
+	key_separator   = 0x6c,
+	key_subtract    = 0x6d,
+	key_decimal     = 0x6e,
+	key_divide      = 0x6f,
 
 	key_f1          = 0x70,
 	key_f2          = 0x71,
@@ -522,7 +463,7 @@ typedef enum pattern_type_e {
 	pattern_texture         = 3,
 }pattern_type_e;
 
-typedef unsigned int color_t;
+typedef DWORD color_t;
 
 struct viewporttype {
 	int left;
@@ -585,22 +526,17 @@ typedef struct ege_colpoint {
 	color_t color;
 }ege_colpoint;
 
-// é¼ æ ‡æ¶ˆæ¯
-#if defined(__GNUC__)
-struct EGE_DEPRECATE(MOUSEMSG) MOUSEMSG {
-#else
-EGE_DEPRECATE(MOUSEMSG)
+// Êó±êÏûÏ¢
 struct MOUSEMSG {
-#endif
-	UINT uMsg;              // å½“å‰é¼ æ ‡æ¶ˆæ¯
-	bool mkCtrl;            // Ctrl é”®æ˜¯å¦æŒ‰ä¸‹
-	bool mkShift;           // Shift é”®æ˜¯å¦æŒ‰ä¸‹
-	bool mkLButton;         // é¼ æ ‡å·¦é”®æ˜¯å¦æŒ‰ä¸‹
-	bool mkMButton;         // é¼ æ ‡ä¸­é”®æ˜¯å¦æŒ‰ä¸‹
-	bool mkRButton;         // é¼ æ ‡å³é”®æ˜¯å¦æŒ‰ä¸‹
-	short x;                // å½“å‰é¼ æ ‡ x åæ ‡
-	short y;                // å½“å‰é¼ æ ‡ y åæ ‡
-	short wheel;            // é¼ æ ‡æ»šè½®æ»šåŠ¨å€¼(120ä¸ºåŸºæ•°)
+	UINT uMsg;              // µ±Ç°Êó±êÏûÏ¢
+	bool mkCtrl;            // Ctrl ¼üÊÇ·ñ°´ÏÂ
+	bool mkShift;           // Shift ¼üÊÇ·ñ°´ÏÂ
+	bool mkLButton;         // Êó±ê×ó¼üÊÇ·ñ°´ÏÂ
+	bool mkMButton;         // Êó±êÖĞ¼üÊÇ·ñ°´ÏÂ
+	bool mkRButton;         // Êó±êÓÒ¼üÊÇ·ñ°´ÏÂ
+	short x;                // µ±Ç°Êó±ê x ×ø±ê
+	short y;                // µ±Ç°Êó±ê y ×ø±ê
+	short wheel;            // Êó±ê¹öÂÖ¹ö¶¯Öµ(120Îª»ùÊı)
 };
 
 struct msg_createwindow {
@@ -609,18 +545,12 @@ struct msg_createwindow {
 	LPCWSTR classname;
 	DWORD style;
 	DWORD exstyle;
-	unsigned id;
+	size_t id;
 	LPVOID param;
 };
 
 
-// ç»˜å›¾ç¯å¢ƒåˆå§‹åŒ–å‚æ•°
-#define INITGRAPH(x, y) struct _initgraph_{_initgraph_(){initgraph(x, y);}\
-	~_initgraph_(){closegraph();}}_g_initgraph_
-#define INITGRAPH3(x, y, f) struct _initgraph_{_initgraph_(){initgraph(x, y, f);}\
-	~_initgraph_(){closegraph();}}_g_initgraph_
-
-//éŸ³ä¹ç±»å®
+//ÒôÀÖÀàºê
 #define MUSIC_ERROR  0xFFFFFFFF
 
 
@@ -632,13 +562,13 @@ typedef MSG_KEY_PROC        * LPMSG_KEY_PROC;
 typedef MSG_MOUSE_PROC      * LPMSG_MOUSE_PROC;
 
 /*
-æ³¨æ„ï¼šä»¥ä¸‹å‡½æ•°çš„æ³¨é‡Šåå¸¦'###'çš„å‡½æ•°è¡¨ç¤ºæœªå®ç°
+×¢Òâ£ºÒÔÏÂº¯ÊıµÄ×¢ÊÍºó´ø'###'µÄº¯Êı±íÊ¾Î´ÊµÏÖ
 */
 
 struct VECTOR3D;
 
-// 3d è®¡ç®—è¾…åŠ©å‡½æ•°
-void EGEAPI rotate_point3d_x(VECTOR3D  * pt, float r); //å¼§åº¦ï¼Œå³æ‰‹å®šåˆ™
+// 3d ¼ÆËã¸¨Öúº¯Êı
+void EGEAPI rotate_point3d_x(VECTOR3D  * pt, float r); //»¡¶È£¬ÓÒÊÖ¶¨Ôò
 void EGEAPI rotate_point3d_y(VECTOR3D  * pt, float r);
 void EGEAPI rotate_point3d_z(VECTOR3D  * pt, float r);
 
@@ -661,11 +591,11 @@ struct VECTOR3D {
 	VECTOR3D& operator -= (const VECTOR3D& _fp);
 	VECTOR3D operator + (const VECTOR3D& _fp) const;
 	VECTOR3D operator - (const VECTOR3D& _fp) const;
-	VECTOR3D& operator *= (float f); //ç¼©æ”¾
-	VECTOR3D operator * (float f) const; //ç¼©æ”¾
-	float operator * (const VECTOR3D& _fp) const; //ç‚¹ä¹˜
-	VECTOR3D operator & (const VECTOR3D& _fp) const; //å‰ä¹˜
-	VECTOR3D& operator &= (const VECTOR3D& _fp); //å‰ä¹˜
+	VECTOR3D& operator *= (float f); //Ëõ·Å
+	VECTOR3D operator * (float f) const; //Ëõ·Å
+	float operator * (const VECTOR3D& _fp) const; //µã³Ë
+	VECTOR3D operator & (const VECTOR3D& _fp) const; //²æ³Ë
+	VECTOR3D& operator &= (const VECTOR3D& _fp); //²æ³Ë
 	float GetModule() const;
 	float GetSqrModule() const {
 		return float(x*x + y*y + z*z);
@@ -675,141 +605,163 @@ struct VECTOR3D {
 		*this *= t;
 		return *this;
 	}
-	VECTOR3D& Rotate(float rad, const VECTOR3D& v); //ç»•ä»»æ„è½´æ—‹è½¬ï¼Œå³æ‰‹å®šåˆ™ï¼Œradä¸ºå¼§åº¦
+	VECTOR3D& Rotate(float rad, const VECTOR3D& v); //ÈÆÈÎÒâÖáĞı×ª£¬ÓÒÊÖ¶¨Ôò£¬radÎª»¡¶È
 	VECTOR3D& Rotate(float rad, float x, float y, float z) {
 		VECTOR3D v(x, y, z);
 		return Rotate(rad, v);
 	}
-	VECTOR3D& Rotate(const VECTOR3D& e, const VECTOR3D& s = VECTOR3D(0.0f, 0.0f, 1.0f)); //ä»såˆ°eä¹‹é—´çš„å¤¹è§’ç¡®å®šæ—‹è½¬
+	VECTOR3D& Rotate(const VECTOR3D& e, const VECTOR3D& s = VECTOR3D(0.0f, 0.0f, 1.0f)); //´Ósµ½eÖ®¼äµÄ¼Ğ½ÇÈ·¶¨Ğı×ª
 	static float GetAngel(const VECTOR3D& e, const VECTOR3D& s = VECTOR3D(0.0f, 0.0f, 1.0f));
 };
 
 
 class IMAGE;
 typedef IMAGE *PIMAGE;
+typedef const IMAGE *PCIMAGE;
 
-// ç»˜å›¾ç¯å¢ƒç›¸å…³å‡½æ•°
-
-void EGEAPI initgraph(int Width, int Height, int Flag = INIT_DEFAULT);    // åˆå§‹åŒ–å›¾å½¢ç¯å¢ƒ
-void EGEAPI initgraph(int* gdriver, int* gmode, char* path);   // å…¼å®¹ Borland C++ 3.1 çš„é‡è½½ï¼Œåªä½¿ç”¨ 640x480x24bit
-void EGEAPI closegraph();                                      // å…³é—­å›¾å½¢ç¯å¢ƒ
-bool EGEAPI is_run();   // åˆ¤æ–­UIæ˜¯å¦é€€å‡º
+// »æÍ¼»·¾³Ïà¹Øº¯Êı
+void EGEAPI setinitmode(int mode, int x = CW_USEDEFAULT, int y = CW_USEDEFAULT); //ÉèÖÃ³õÊ¼»¯Ä£Ê½£¬mode=0ÎªÆÕÍ¨£¬1ÎªÎŞ±ß¿ò´°¿Ú£¬xyÊÇ³õÊ¼´°¿Ú×ø±ê
+int  EGEAPI getinitmode();
+void EGEAPI initgraph(int Width, int Height, int Flag);        // ³õÊ¼»¯Í¼ĞÎ»·¾³
+// Debug ÅäÖÃÏÂÄ¬ÈÏ²»ÏÔÊ¾ LOGO£¬Release Ä£Ê½ÏÂÄ¬ÈÏÏÔÊ¾¡£
+#if !defined(NDEBUG) || defined(DEBUG) || defined(_DEBUG)
+inline void EGEAPI initgraph(int Width, int Height) {
+	initgraph(Width, Height, getinitmode());
+}
+#else
+inline void EGEAPI initgraph(int Width, int Height) {
+	initgraph(Width, Height, getinitmode()|INIT_WITHLOGO);
+}
+#endif
+void EGEAPI initgraph(int* gdriver, int* gmode, const char* path);  // ¼æÈİ Borland C++ 3.1 µÄÖØÔØ£¬Ö»Ê¹ÓÃ 640x480x24bit
+void EGEAPI closegraph();                                           // ¹Ø±ÕÍ¼ĞÎ»·¾³
+bool EGEAPI is_run();                                               // ÅĞ¶ÏUIÊÇ·ñÍË³ö
 void EGEAPI setcaption(LPCSTR  caption);
 void EGEAPI setcaption(LPCWSTR caption);
+void EGEAPI seticon(int icon_id);
+int  EGEAPI attachHWND(HWND hWnd);
+
+void EGEAPI movewindow(int x, int y, bool redraw = true);	//ÒÆ¶¯´°¿Ú
+void EGEAPI resizewindow(int width, int height);			//ÖØÉè´°¿Ú³ß´ç
 
 void EGEAPI setrendermode(rendermode_e mode);
 
-// ç»˜å›¾ç¯å¢ƒè®¾ç½®
+// »æÍ¼»·¾³ÉèÖÃ
 PIMAGE  gettarget();
-int     settarget(PIMAGE pbuf); // ç”¨ NULL è®¾ç½®çª—å£ä¸ºç»˜å›¾ç›®æ ‡
+int     settarget(PIMAGE pbuf); // ÓÃ NULL ÉèÖÃ´°¿ÚÎª»æÍ¼Ä¿±ê
 
-void EGEAPI cleardevice(PIMAGE pimg = NULL);                   // æ¸…å±
+void EGEAPI cleardevice(PIMAGE pimg = NULL);                   // ÇåÆÁ
 
-void EGEAPI getviewport(int *pleft, int *ptop, int *pright, int *pbottom, int *pclip = 0, PIMAGE pimg = NULL); // è·å–è§†å›¾ä¿¡æ¯
-void EGEAPI setviewport(int left, int top, int right, int bottom, int clip = 1, PIMAGE pimg = NULL);           // è®¾ç½®è§†å›¾
-void EGEAPI clearviewport(PIMAGE pimg = NULL);                                                                 // æ¸…ç©ºè§†å›¾
+void EGEAPI getviewport(int *pleft, int *ptop, int *pright, int *pbottom, int *pclip = 0, PCIMAGE pimg = NULL); // »ñÈ¡ÊÓÍ¼ĞÅÏ¢
+void EGEAPI setviewport(int left, int top, int right, int bottom, int clip = 1, PIMAGE pimg = NULL);           // ÉèÖÃÊÓÍ¼
+void EGEAPI clearviewport(PIMAGE pimg = NULL);                                                                 // Çå¿ÕÊÓÍ¼
 
 EGE_DEPRECATE(setactivepage)
-void EGEAPI setactivepage(int page); // è®¾ç½®å½“å‰ç»˜å›¾é¡µï¼Œå³ç»˜å›¾å‡½æ•°é»˜è®¤çš„è¾“å‡ºç¼“å†²ï¼ŒèŒƒå›´0-1ï¼Œé»˜è®¤ä¸º0
+void EGEAPI setactivepage(int page); // ÉèÖÃµ±Ç°»æÍ¼Ò³£¬¼´»æÍ¼º¯ÊıÄ¬ÈÏµÄÊä³ö»º³å£¬·¶Î§0-1£¬Ä¬ÈÏÎª0
 EGE_DEPRECATE(setvisualpage)
-void EGEAPI setvisualpage(int page); // è®¾ç½®å½“å‰æ˜¾ç¤ºé¡µï¼Œç”¨äºè®¾ç½®æ˜¾ç¤ºåˆ°çª—å£ä¸Šçš„é¡µï¼ŒèŒƒå›´0-1ï¼Œé»˜è®¤ä¸º0
+void EGEAPI setvisualpage(int page); // ÉèÖÃµ±Ç°ÏÔÊ¾Ò³£¬ÓÃÓÚÉèÖÃÏÔÊ¾µ½´°¿ÚÉÏµÄÒ³£¬·¶Î§0-1£¬Ä¬ÈÏÎª0
 EGE_DEPRECATE(swappage)
 void EGEAPI swappage();
 void EGEAPI window_getviewport(struct viewporttype * viewport);
 void EGEAPI window_getviewport(int* left, int* top, int* right, int* bottom);
 void EGEAPI window_setviewport(int  left, int  top, int  right, int  bottom);
 
-// ç»˜å›¾å±æ€§
-EGE_DEPRECATE(setactivepage)
-void EGEAPI getlinestyle(int *plinestyle, unsigned short *pupattern = NULL, int *pthickness = NULL, PIMAGE pimg = NULL); // è·å–å½“å‰çº¿å½¢
-void EGEAPI setlinestyle(int linestyle, unsigned short upattern = 0, int thickness = 1, PIMAGE pimg = NULL);          // è®¾ç½®å½“å‰çº¿å½¢
-void EGEAPI setlinewidth(float width, PIMAGE pimg = NULL);          // è®¾ç½®å½“å‰çº¿å®½
-//EGE_DEPRECATE(setactivepage)
-//void getfillstyle(color_t *pcolor, int *ppattern = NULL, PIMAGE pimg = NULL);           // è·å–å¡«å……ç±»å‹ ###
-EGE_DEPRECATE(setactivepage)
-void EGEAPI setfillstyle(int pattern, color_t color, PIMAGE pimg = NULL);  // è®¾ç½®å¡«å……ç±»å‹
+// »æÍ¼ÊôĞÔ
+EGE_DEPRECATE(getlinestyle)
+void EGEAPI getlinestyle(int *plinestyle, unsigned short *pupattern = NULL, int *pthickness = NULL, PCIMAGE pimg = NULL); // »ñÈ¡µ±Ç°ÏßĞÎ
+void EGEAPI setlinestyle(int linestyle, unsigned short upattern = 0, int thickness = 1, PIMAGE pimg = NULL);          // ÉèÖÃµ±Ç°ÏßĞÎ
+void EGEAPI setlinewidth(float width, PIMAGE pimg = NULL);          // ÉèÖÃµ±Ç°Ïß¿í
+//EGE_DEPRECATE(getfillstyle)
+//void getfillstyle(color_t *pcolor, int *ppattern = NULL, PIMAGE pimg = NULL);           // »ñÈ¡Ìî³äÀàĞÍ ###
+EGE_DEPRECATE(setfillstyle)
+void EGEAPI setfillstyle(int pattern, color_t color, PIMAGE pimg = NULL);  // ÉèÖÃÌî³äÀàĞÍ
 
-void EGEAPI setwritemode(int mode, PIMAGE pimg = NULL);         // è®¾ç½®ç»˜å›¾ä½æ“ä½œæ¨¡å¼
+void EGEAPI setwritemode(int mode, PIMAGE pimg = NULL);         // ÉèÖÃ»æÍ¼Î»²Ù×÷Ä£Ê½
 
-//void EGEAPI graphdefaults(PIMAGE pimg = NULL);                  // é‡ç½®æ‰€æœ‰ç»˜å›¾è®¾ç½®ä¸ºé»˜è®¤å€¼ ###
+//void EGEAPI graphdefaults(PIMAGE pimg = NULL);                  // ÖØÖÃËùÓĞ»æÍ¼ÉèÖÃÎªÄ¬ÈÏÖµ ###
 
-// è‰²å½©å‡½æ•°
-color_t EGEAPI getcolor(PIMAGE pimg = NULL);                    // è·å–å½“å‰ç»˜å›¾å‰æ™¯è‰²
-color_t EGEAPI getfillcolor(PIMAGE pimg = NULL);                // è·å–å½“å‰ç»˜å›¾å¡«å……è‰²
-color_t EGEAPI getbkcolor(PIMAGE pimg = NULL);                  // è·å–å½“å‰ç»˜å›¾èƒŒæ™¯è‰²
-void EGEAPI setcolor(color_t color, PIMAGE pimg = NULL);        // è®¾ç½®å½“å‰ç»˜å›¾å‰æ™¯è‰²
-void EGEAPI setfillcolor(color_t color, PIMAGE pimg = NULL);    // è®¾ç½®å½“å‰ç»˜å›¾å¡«å……è‰²
-void EGEAPI setbkcolor(color_t color, PIMAGE pimg = NULL);      // è®¾ç½®å½“å‰ç»˜å›¾èƒŒæ™¯è‰²ï¼ˆè®¾ç½®å¹¶åšèƒŒæ™¯è‰²åƒç´ æ›¿æ¢ï¼‰
-void EGEAPI setbkcolor_f(color_t color, PIMAGE pimg = NULL);    // å¿«é€Ÿè®¾ç½®å½“å‰ç»˜å›¾èƒŒæ™¯è‰²ï¼ˆåªè®¾ç½®ä¸ç»˜ç”»ï¼‰
-void EGEAPI setfontbkcolor(color_t color, PIMAGE pimg = NULL);  // è®¾ç½®å½“å‰æ–‡å­—èƒŒæ™¯è‰²
-void EGEAPI setbkmode(int iBkMode, PIMAGE pimg = NULL);         // è®¾ç½®èƒŒæ™¯æ··åˆæ¨¡å¼(0=OPAQUE, 1=TRANSPARENT)
-void EGEAPI setinitmode(int mode = INIT_DEFAULT, int x = CW_USEDEFAULT, int y = CW_USEDEFAULT); //è®¾ç½®åˆå§‹åŒ–æ¨¡å¼ï¼Œmode=0ä¸ºæ™®é€šï¼Œ1ä¸ºæ— è¾¹æ¡†çª—å£ï¼Œxyæ˜¯åˆå§‹çª—å£åæ ‡
-int  EGEAPI attachHWND(HWND hWnd);
+// É«²Êº¯Êı
+color_t EGEAPI getcolor(PCIMAGE pimg = NULL);                   // »ñÈ¡µ±Ç°»æÍ¼Ç°¾°É«
+color_t EGEAPI getfillcolor(PCIMAGE pimg = NULL);               // »ñÈ¡µ±Ç°»æÍ¼Ìî³äÉ«
+color_t EGEAPI getbkcolor(PCIMAGE pimg = NULL);                 // »ñÈ¡µ±Ç°»æÍ¼±³¾°É«
+void EGEAPI setcolor(color_t color, PIMAGE pimg = NULL);        // ÉèÖÃµ±Ç°»æÍ¼Ç°¾°É«
+void EGEAPI setfillcolor(color_t color, PIMAGE pimg = NULL);    // ÉèÖÃµ±Ç°»æÍ¼Ìî³äÉ«
+void EGEAPI setbkcolor(color_t color, PIMAGE pimg = NULL);      // ÉèÖÃµ±Ç°»æÍ¼±³¾°É«£¨ÉèÖÃ²¢×ö±³¾°É«ÏñËØÌæ»»£©
+void EGEAPI setbkcolor_f(color_t color, PIMAGE pimg = NULL);    // ¿ìËÙÉèÖÃµ±Ç°»æÍ¼±³¾°É«£¨Ö»ÉèÖÃ²»»æ»­£©
+void EGEAPI setfontbkcolor(color_t color, PIMAGE pimg = NULL);  // ÉèÖÃµ±Ç°ÎÄ×Ö±³¾°É«
+void EGEAPI setbkmode(int iBkMode, PIMAGE pimg = NULL);         // ÉèÖÃ±³¾°»ìºÏÄ£Ê½(0=OPAQUE, 1=TRANSPARENT)
 
-// å…¼å®¹å®
+// ¼æÈİºê
 #define RGBtoGRAY   rgb2gray
 #define RGBtoHSL    rgb2hsl
 #define RGBtoHSV    rgb2hsv
 #define HSLtoRGB    hsl2rgb
 #define HSVtoRGB    hsv2rgb
 
-// é¢œè‰²æ¨¡å‹è½¬æ¢å‡½æ•°
+// ÑÕÉ«Ä£ĞÍ×ª»»º¯Êı
 color_t     EGEAPI rgb2gray(color_t rgb);
 void        EGEAPI rgb2hsl(color_t rgb, float *H, float *S, float *L);
 void        EGEAPI rgb2hsv(color_t rgb, float *H, float *S, float *V);
 color_t     EGEAPI hsl2rgb(float H, float S, float L);
 color_t     EGEAPI hsv2rgb(float H, float S, float V);
 
-
-// åŸºæœ¬ç»˜å›¾å‡½æ•°
-
-color_t     EGEAPI getpixel  (int x, int y, PIMAGE pimg = NULL);                // è·å–ç‚¹çš„é¢œè‰²
-void        EGEAPI putpixel  (int x, int y, color_t color, PIMAGE pimg = NULL); // ç”»ç‚¹
-color_t     EGEAPI getpixel_f(int x, int y, PIMAGE pimg = NULL);                // è·å–ç‚¹çš„é¢œè‰²
-void        EGEAPI putpixel_f(int x, int y, color_t color, PIMAGE pimg = NULL); // ç”»ç‚¹
-void        EGEAPI putpixels  (int nPoint, int* pPoints, PIMAGE pimg = NULL);   // æ‰¹é‡ç”»ç‚¹
-void        EGEAPI putpixels_f(int nPoint, int* pPoints, PIMAGE pimg = NULL);   // æ‰¹é‡ç”»ç‚¹
-
-void EGEAPI moveto(int x, int y, PIMAGE pimg = NULL);                      // ç§»åŠ¨å½“å‰ç‚¹(ç»å¯¹åæ ‡)
-void EGEAPI moverel(int dx, int dy, PIMAGE pimg = NULL);                   // ç§»åŠ¨å½“å‰ç‚¹(ç›¸å¯¹åæ ‡)
-
-void EGEAPI line(int x1, int y1, int x2, int y2, PIMAGE pimg = NULL);      // ç”»çº¿
-void EGEAPI linerel(int dx, int dy, PIMAGE pimg = NULL);                   // ç”»çº¿(è‡³ç›¸å¯¹åæ ‡)
-void EGEAPI lineto(int x, int y, PIMAGE pimg = NULL);                      // ç”»çº¿(è‡³ç»å¯¹åæ ‡)
-void EGEAPI line_f(float x1, float y1, float x2, float y2, PIMAGE pimg = NULL);  // ç”»çº¿
-void EGEAPI linerel_f(float dx, float dy, PIMAGE pimg = NULL);                   // ç”»çº¿(è‡³ç›¸å¯¹åæ ‡)
-void EGEAPI lineto_f(float x, float y, PIMAGE pimg = NULL);                      // ç”»çº¿(è‡³ç»å¯¹åæ ‡)
+// °´ Alpha Í¨µÀ»ìºÏÑÕÉ«£¬½« src ×÷Îª±³¾°É«£¬dst ×÷ÎªÇ°¾°É«½øĞĞ»ìºÏ
+color_t     EGEAPI alphablend(color_t dst, color_t src); // Ê¹ÓÃ EGEGET_A(src) ×÷Îª Alpha Öµ
+color_t     EGEAPI alphablend(color_t dst, color_t src, unsigned char alpha);
 
 
-void EGEAPI rectangle(int left, int top, int right, int bottom, PIMAGE pimg = NULL);   // ç”»çŸ©å½¢
+// »ù±¾»æÍ¼º¯Êı
 
-//void EGEAPI getarccoords(int *px, int *py, int *pxstart, int *pystart, int *pxend, int *pyend, PIMAGE pimg = NULL);    // è·å–åœ†å¼§åæ ‡ä¿¡æ¯ ###
-void EGEAPI arc(int x, int y, int stangle, int endangle, int radius, PIMAGE pimg = NULL);                  // ç”»åœ†å¼§
-void EGEAPI circle(int x, int y, int radius, PIMAGE pimg = NULL);                                          // ç”»åœ†
-void EGEAPI pieslice(int x, int y, int stangle, int endangle, int radius, PIMAGE pimg = NULL);             // ç”»å¡«å……åœ†æ‰‡å½¢
-void EGEAPI ellipse(int x, int y, int stangle, int endangle, int xradius, int yradius, PIMAGE pimg = NULL);// ç”»æ¤­åœ†å¼§çº¿
-void EGEAPI fillellipse(int x, int y, int xradius, int yradius, PIMAGE pimg = NULL);                       // ç”»å¡«å……æ¤­åœ†
-void EGEAPI sector(int x, int y, int stangle, int endangle, int xradius, int yradius, PIMAGE pimg = NULL); // ç”»å¡«å……æ¤­åœ†æ‰‡å½¢
+color_t     EGEAPI getpixel  (int x, int y, PCIMAGE pimg = NULL);               // »ñÈ¡µãµÄÑÕÉ«
+void        EGEAPI putpixel  (int x, int y, color_t color, PIMAGE pimg = NULL); // »­µã
+color_t     EGEAPI getpixel_f(int x, int y, PCIMAGE pimg = NULL);               // »ñÈ¡µãµÄÑÕÉ«
+void        EGEAPI putpixel_f(int x, int y, color_t color, PIMAGE pimg = NULL); // ¾ø¶Ô×ø±ê»­µã
+void        EGEAPI putpixels  (int nPoint, int* pPoints, PIMAGE pimg = NULL);   // ÅúÁ¿»­µã
+void        EGEAPI putpixels_f(int nPoint, int* pPoints, PIMAGE pimg = NULL);   // ÅúÁ¿»­µã
 
-void EGEAPI arcf(float x, float y, float stangle, float endangle, float radius, PIMAGE pimg = NULL);                    // ç”»åœ†å¼§
-void EGEAPI circlef(float x, float y, float radius, PIMAGE pimg = NULL);                                                // ç”»åœ†
-void EGEAPI pieslicef(float x, float y, float stangle, float endangle, float radius, PIMAGE pimg = NULL);               // ç”»å¡«å……åœ†æ‰‡å½¢
-void EGEAPI ellipsef(float x, float y, float stangle, float endangle, float xradius, float yradius, PIMAGE pimg = NULL);// ç”»æ¤­åœ†å¼§çº¿
-void EGEAPI fillellipsef(float x, float y, float xradius, float yradius, PIMAGE pimg = NULL);                           // ç”»å¡«å……æ¤­åœ†
-void EGEAPI sectorf(float x, float y, float stangle, float endangle, float xradius, float yradius, PIMAGE pimg = NULL); // ç”»å¡«å……æ¤­åœ†æ‰‡å½¢
+void        EGEAPI putpixel_withalpha  (int x, int y, color_t color, PIMAGE pimg = NULL); // ´øÍ¸Ã÷¶È»­µã
+void        EGEAPI putpixel_withalpha_f(int x, int y, color_t color, PIMAGE pimg = NULL); // ´øÍ¸Ã÷¶È¾ø¶Ô×ø±ê»­µã
 
-void EGEAPI bar(int left, int top, int right, int bottom, PIMAGE pimg = NULL);                             // ç”»æ— è¾¹æ¡†å¡«å……çŸ©å½¢
-void EGEAPI bar3d(int left, int top, int right, int bottom, int depth, int topflag, PIMAGE pimg = NULL);   // ç”»æœ‰è¾¹æ¡†ä¸‰ç»´å¡«å……çŸ©å½¢
+void EGEAPI moveto(int x, int y, PIMAGE pimg = NULL);                      // ÒÆ¶¯µ±Ç°µã(¾ø¶Ô×ø±ê)
+void EGEAPI moverel(int dx, int dy, PIMAGE pimg = NULL);                   // ÒÆ¶¯µ±Ç°µã(Ïà¶Ô×ø±ê)
 
-void EGEAPI drawpoly(int numpoints, const int *polypoints, PIMAGE pimg = NULL);     // ç”»å¤šè¾¹å½¢
-void EGEAPI drawlines(int numlines, const int *polypoints, PIMAGE pimg = NULL);     // ç”»å¤šæ¡ä¸è¿ç»­çº¿ï¼ˆæ‰©å±•å‡½æ•°ï¼‰
-void EGEAPI drawbezier(int numpoints, const int *polypoints, PIMAGE pimg = NULL);   // ç”»bezieræ›²çº¿ï¼ˆæ‰©å±•å‡½æ•°ï¼‰
-void EGEAPI fillpoly(int numpoints, const int *polypoints, PIMAGE pimg = NULL);     // ç”»å¡«å……çš„å¤šè¾¹å½¢
-void EGEAPI fillpoly_gradient(int numpoints, const ege_colpoint* polypoints, PIMAGE pimg = NULL); // ç”»æ¸å˜å¡«å……çš„å¤šè¾¹å½¢
-void EGEAPI floodfill(int x, int y, int border, PIMAGE pimg = NULL);                // æŒ‰è¾¹ç•Œé¢œè‰²å¡«å……åŒºåŸŸ
-void EGEAPI floodfillsurface(int x, int y, color_t areacolor, PIMAGE pimg = NULL);  // æŒ‰èµ·å§‹ç‚¹é¢œè‰²å¡«å……åŒºåŸŸ
+void EGEAPI line(int x1, int y1, int x2, int y2, PIMAGE pimg = NULL);      // »­Ïß
+void EGEAPI linerel(int dx, int dy, PIMAGE pimg = NULL);                   // »­Ïß(ÖÁÏà¶Ô×ø±ê)
+void EGEAPI lineto(int x, int y, PIMAGE pimg = NULL);                      // »­Ïß(ÖÁ¾ø¶Ô×ø±ê)
+void EGEAPI line_f(float x1, float y1, float x2, float y2, PIMAGE pimg = NULL);  // »­Ïß
+void EGEAPI linerel_f(float dx, float dy, PIMAGE pimg = NULL);                   // »­Ïß(ÖÁÏà¶Ô×ø±ê)
+void EGEAPI lineto_f(float x, float y, PIMAGE pimg = NULL);                      // »­Ïß(ÖÁ¾ø¶Ô×ø±ê)
 
-// é«˜çº§ç»˜å›¾å‡½æ•°ï¼ˆå¸¦AAï¼‰
+
+void EGEAPI rectangle(int left, int top, int right, int bottom, PIMAGE pimg = NULL);   // »­¾ØĞÎ
+
+//void EGEAPI getarccoords(int *px, int *py, int *pxstart, int *pystart, int *pxend, int *pyend, PIMAGE pimg = NULL);    // »ñÈ¡Ô²»¡×ø±êĞÅÏ¢ ###
+void EGEAPI arc(int x, int y, int stangle, int endangle, int radius, PIMAGE pimg = NULL);                  // »­Ô²»¡
+void EGEAPI circle(int x, int y, int radius, PIMAGE pimg = NULL);                                          // »­Ô²
+void EGEAPI pieslice(int x, int y, int stangle, int endangle, int radius, PIMAGE pimg = NULL);             // »­Ìî³äÔ²ÉÈĞÎ
+void EGEAPI ellipse(int x, int y, int stangle, int endangle, int xradius, int yradius, PIMAGE pimg = NULL);// »­ÍÖÔ²»¡Ïß
+void EGEAPI fillellipse(int x, int y, int xradius, int yradius, PIMAGE pimg = NULL);                       // »­Ìî³äÍÖÔ²
+void EGEAPI sector(int x, int y, int stangle, int endangle, int xradius, int yradius, PIMAGE pimg = NULL); // »­Ìî³äÍÖÔ²ÉÈĞÎ
+
+void EGEAPI arcf(float x, float y, float stangle, float endangle, float radius, PIMAGE pimg = NULL);                    // »­Ô²»¡
+void EGEAPI circlef(float x, float y, float radius, PIMAGE pimg = NULL);                                                // »­Ô²
+void EGEAPI pieslicef(float x, float y, float stangle, float endangle, float radius, PIMAGE pimg = NULL);               // »­Ìî³äÔ²ÉÈĞÎ
+void EGEAPI ellipsef(float x, float y, float stangle, float endangle, float xradius, float yradius, PIMAGE pimg = NULL);// »­ÍÖÔ²»¡Ïß
+void EGEAPI fillellipsef(float x, float y, float xradius, float yradius, PIMAGE pimg = NULL);                           // »­Ìî³äÍÖÔ²
+void EGEAPI sectorf(float x, float y, float stangle, float endangle, float xradius, float yradius, PIMAGE pimg = NULL); // »­Ìî³äÍÖÔ²ÉÈĞÎ
+
+void EGEAPI bar(int left, int top, int right, int bottom, PIMAGE pimg = NULL);                             // »­ÎŞ±ß¿òÌî³ä¾ØĞÎ
+void EGEAPI bar3d(int left, int top, int right, int bottom, int depth, int topflag, PIMAGE pimg = NULL);   // »­ÓĞ±ß¿òÈıÎ¬Ìî³ä¾ØĞÎ
+
+void EGEAPI drawpoly(int numpoints, const int *polypoints, PIMAGE pimg = NULL);     // »­¶à±ßĞÎ
+void EGEAPI drawlines(int numlines, const int *polypoints, PIMAGE pimg = NULL);     // »­¶àÌõ²»Á¬ĞøÏß£¨À©Õ¹º¯Êı£©
+void EGEAPI drawbezier(int numpoints, const int *polypoints, PIMAGE pimg = NULL);   // »­bezierÇúÏß£¨À©Õ¹º¯Êı£©
+void EGEAPI fillpoly(int numpoints, const int *polypoints, PIMAGE pimg = NULL);     // »­Ìî³äµÄ¶à±ßĞÎ
+void EGEAPI fillpoly_gradient(int numpoints, const ege_colpoint* polypoints, PIMAGE pimg = NULL); // »­½¥±äÌî³äµÄ¶à±ßĞÎ
+void EGEAPI floodfill(int x, int y, int border, PIMAGE pimg = NULL);                // °´±ß½çÑÕÉ«Ìî³äÇøÓò
+void EGEAPI floodfillsurface(int x, int y, color_t areacolor, PIMAGE pimg = NULL);  // °´ÆğÊ¼µãÑÕÉ«Ìî³äÇøÓò
+
+// ¸ß¼¶»æÍ¼º¯Êı£¨´øAA£©
 // ege new_api
 void EGEAPI ege_enable_aa(bool enable, PIMAGE pimg = NULL);
 
@@ -836,70 +788,73 @@ void EGEAPI ege_setpattern_ellipsegradient(ege_point center, color_t centercolor
 	float x, float y, float w, float h, color_t color, PIMAGE pimg = NULL);
 void EGEAPI ege_setpattern_texture(PIMAGE srcimg, float x, float y, float w, float h, PIMAGE pimg = NULL);
 
+void EGEAPI ege_drawtext(LPCSTR  textstring, float x, float y, PIMAGE pimg = NULL);
+void EGEAPI ege_drawtext(LPCWSTR textstring, float x, float y, PIMAGE pimg = NULL);
+
 void EGEAPI ege_setalpha(int alpha, PIMAGE pimg = NULL);
 void EGEAPI ege_gentexture(bool gen, PIMAGE pimg = NULL);
-void EGEAPI ege_puttexture(PIMAGE srcimg, float x, float y, float w, float h, PIMAGE pimg = NULL);
-void EGEAPI ege_puttexture(PIMAGE srcimg, ege_rect dest, PIMAGE pimg = NULL);
-void EGEAPI ege_puttexture(PIMAGE srcimg, ege_rect dest, ege_rect src, PIMAGE pimg = NULL);
+void EGEAPI ege_puttexture(PCIMAGE srcimg, float x, float y, float w, float h, PIMAGE pimg = NULL);
+void EGEAPI ege_puttexture(PCIMAGE srcimg, ege_rect dest, PIMAGE pimg = NULL);
+void EGEAPI ege_puttexture(PCIMAGE srcimg, ege_rect dest, ege_rect src, PIMAGE pimg = NULL);
 //
 
 //int  EGEAPI Begin2d();
 //void EGEAPI EndRender();
 
-//æ—¶é—´å‡½æ•°ï¼ˆä»¥ä¸‹å‡½æ•°ä¸èƒ½åœ¨å¤šçº¿ç¨‹ä¸‹ä½¿ç”¨ï¼Œåªèƒ½ç»™ç»˜å›¾ä¸»çº¿ç¨‹è°ƒç”¨ï¼‰
-void EGEAPI ege_sleep(long ms);     // è‡³å°‘å»¶è¿Ÿmsæ¯«ç§’
-void EGEAPI delay(long ms);         // è‡³å°‘å»¶è¿Ÿmsæ¯«ç§’
-void EGEAPI delay_ms(long ms);      // å¹³å‡å»¶è¿Ÿmsæ¯«ç§’
-void EGEAPI delay_fps(int fps);    // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šå¸§ç‡æ§åˆ¶
-void EGEAPI delay_fps(long fps);    // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šå¸§ç‡æ§åˆ¶
-void EGEAPI delay_fps(double fps);  // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šå¸§ç‡æ§åˆ¶
-void EGEAPI delay_jfps(int fps);   // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šé€»è¾‘å¸§ç‡æ§åˆ¶ï¼Œç»˜å›¾å¸¦è·³å¸§
-void EGEAPI delay_jfps(long fps);   // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šé€»è¾‘å¸§ç‡æ§åˆ¶ï¼Œç»˜å›¾å¸¦è·³å¸§
-void EGEAPI delay_jfps(double fps); // å¹³å‡å»¶è¿Ÿ1000/fpsæ¯«ç§’ï¼Œç”¨äºç¨³å®šé€»è¾‘å¸§ç‡æ§åˆ¶ï¼Œç»˜å›¾å¸¦è·³å¸§
-// ä»¥ä¸‹å‡½æ•°å¯ä»¥å¤šçº¿ç¨‹ä¸‹ä½¿ç”¨ï¼Œéå›¾å½¢(worker)çº¿ç¨‹çš„sleepä½¿ç”¨è¿™ä¸ª
+//Ê±¼äº¯Êı£¨ÒÔÏÂº¯Êı²»ÄÜÔÚ¶àÏß³ÌÏÂÊ¹ÓÃ£¬Ö»ÄÜ¸ø»æÍ¼Ö÷Ïß³Ìµ÷ÓÃ£©
+void EGEAPI ege_sleep(long ms);     // ÖÁÉÙÑÓ³ÙmsºÁÃë
+void EGEAPI delay(long ms);         // ÖÁÉÙÑÓ³ÙmsºÁÃë
+void EGEAPI delay_ms(long ms);      // Æ½¾ùÑÓ³ÙmsºÁÃë
+void EGEAPI delay_fps(int fps);    // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Ö¡ÂÊ¿ØÖÆ
+void EGEAPI delay_fps(long fps);    // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Ö¡ÂÊ¿ØÖÆ
+void EGEAPI delay_fps(double fps);  // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Ö¡ÂÊ¿ØÖÆ
+void EGEAPI delay_jfps(int fps);   // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Âß¼­Ö¡ÂÊ¿ØÖÆ£¬»æÍ¼´øÌøÖ¡
+void EGEAPI delay_jfps(long fps);   // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Âß¼­Ö¡ÂÊ¿ØÖÆ£¬»æÍ¼´øÌøÖ¡
+void EGEAPI delay_jfps(double fps); // Æ½¾ùÑÓ³Ù1000/fpsºÁÃë£¬ÓÃÓÚÎÈ¶¨Âß¼­Ö¡ÂÊ¿ØÖÆ£¬»æÍ¼´øÌøÖ¡
+// ÒÔÏÂº¯Êı¿ÉÒÔ¶àÏß³ÌÏÂÊ¹ÓÃ£¬·ÇÍ¼ĞÎ(worker)Ïß³ÌµÄsleepÊ¹ÓÃÕâ¸ö
 void EGEAPI api_sleep(long dwMilliseconds);
-double EGEAPI fclock(); // è·å–ä»¥ç§’ä¸ºå•ä½çš„æµ®ç‚¹æ—¶é—´ï¼Œåªç”¨äºè®¡æ—¶ç”¨ï¼Œç²¾åº¦0.01ç§’ï¼Œ
+double EGEAPI fclock(); // »ñÈ¡ÒÔÃëÎªµ¥Î»µÄ¸¡µãÊ±¼ä£¬Ö»ÓÃÓÚ¼ÆÊ±ÓÃ£¬¾«¶È0.01Ãë£¬
 
-// æ–‡å­—ç›¸å…³å‡½æ•°
-void EGEAPI outtext(LPCSTR  textstring, PIMAGE pimg = NULL);                   // åœ¨å½“å‰ä½ç½®è¾“å‡ºæ–‡å­—
-void EGEAPI outtext(LPCWSTR textstring, PIMAGE pimg = NULL);                   // åœ¨å½“å‰ä½ç½®è¾“å‡ºæ–‡å­—
-void EGEAPI outtext(CHAR  c, PIMAGE pimg = NULL);                              // åœ¨å½“å‰ä½ç½®è¾“å‡ºå­—ç¬¦
-void EGEAPI outtext(WCHAR c, PIMAGE pimg = NULL);                              // åœ¨å½“å‰ä½ç½®è¾“å‡ºå­—ç¬¦
-void EGEAPI outtextxy(int x, int y, LPCSTR  textstring, PIMAGE pimg = NULL);   // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºæ–‡å­—
-void EGEAPI outtextxy(int x, int y, LPCWSTR textstring, PIMAGE pimg = NULL);   // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºæ–‡å­—
-void EGEAPI outtextxy(int x, int y, CHAR c, PIMAGE pimg = NULL);               // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºå­—ç¬¦
-void EGEAPI outtextxy(int x, int y, WCHAR c, PIMAGE pimg = NULL);              // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºå­—ç¬¦
-void EGEAPI outtextrect(int x, int y, int w, int h, LPCSTR  textstring, PIMAGE pimg = NULL); // åœ¨æŒ‡å®šçŸ©å½¢èŒƒå›´è¾“å‡ºæ–‡å­—
-void EGEAPI outtextrect(int x, int y, int w, int h, LPCWSTR textstring, PIMAGE pimg = NULL); // åœ¨æŒ‡å®šçŸ©å½¢èŒƒå›´è¾“å‡ºæ–‡å­—
-void EGEAPI xyprintf(int x, int y, LPCSTR  fmt, ...); // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºæ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼ŒæŒ‡å®šç»˜å›¾ç›®æ ‡è°ƒç”¨settarget
-void EGEAPI xyprintf(int x, int y, LPCWSTR fmt, ...); // åœ¨æŒ‡å®šä½ç½®è¾“å‡ºæ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼ŒæŒ‡å®šç»˜å›¾ç›®æ ‡è°ƒç”¨settarget
-void EGEAPI rectprintf(int x, int y, int w, int h, LPCSTR  fmt, ...); // åœ¨æŒ‡å®šçŸ©å½¢è¾“å‡ºæ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼ŒæŒ‡å®šç»˜å›¾ç›®æ ‡è°ƒç”¨settarget
-void EGEAPI rectprintf(int x, int y, int w, int h, LPCWSTR fmt, ...); // åœ¨æŒ‡å®šçŸ©å½¢è¾“å‡ºæ ¼å¼åŒ–å­—ç¬¦ä¸²ï¼ŒæŒ‡å®šç»˜å›¾ç›®æ ‡è°ƒç”¨settarget
-int  EGEAPI textwidth(LPCSTR  textstring, PIMAGE pimg = NULL);                 // è·å–å­—ç¬¦ä¸²å ç”¨çš„åƒç´ å®½
-int  EGEAPI textwidth(LPCWSTR textstring, PIMAGE pimg = NULL);                 // è·å–å­—ç¬¦ä¸²å ç”¨çš„åƒç´ å®½
+// ÎÄ×ÖÏà¹Øº¯Êı
+void EGEAPI outtext(LPCSTR  textstring, PIMAGE pimg = NULL);                   // ÔÚµ±Ç°Î»ÖÃÊä³öÎÄ×Ö
+void EGEAPI outtext(LPCWSTR textstring, PIMAGE pimg = NULL);                   // ÔÚµ±Ç°Î»ÖÃÊä³öÎÄ×Ö
+void EGEAPI outtext(CHAR  c, PIMAGE pimg = NULL);                              // ÔÚµ±Ç°Î»ÖÃÊä³ö×Ö·û
+void EGEAPI outtext(WCHAR c, PIMAGE pimg = NULL);                              // ÔÚµ±Ç°Î»ÖÃÊä³ö×Ö·û
+void EGEAPI outtextxy(int x, int y, LPCSTR  textstring, PIMAGE pimg = NULL);   // ÔÚÖ¸¶¨Î»ÖÃÊä³öÎÄ×Ö
+void EGEAPI outtextxy(int x, int y, LPCWSTR textstring, PIMAGE pimg = NULL);   // ÔÚÖ¸¶¨Î»ÖÃÊä³öÎÄ×Ö
+void EGEAPI outtextxy(int x, int y, CHAR c, PIMAGE pimg = NULL);               // ÔÚÖ¸¶¨Î»ÖÃÊä³ö×Ö·û
+void EGEAPI outtextxy(int x, int y, WCHAR c, PIMAGE pimg = NULL);              // ÔÚÖ¸¶¨Î»ÖÃÊä³ö×Ö·û
+void EGEAPI outtextrect(int x, int y, int w, int h, LPCSTR  textstring, PIMAGE pimg = NULL); // ÔÚÖ¸¶¨¾ØĞÎ·¶Î§Êä³öÎÄ×Ö
+void EGEAPI outtextrect(int x, int y, int w, int h, LPCWSTR textstring, PIMAGE pimg = NULL); // ÔÚÖ¸¶¨¾ØĞÎ·¶Î§Êä³öÎÄ×Ö
+void EGEAPI xyprintf(int x, int y, LPCSTR  fmt, ...); // ÔÚÖ¸¶¨Î»ÖÃÊä³ö¸ñÊ½»¯×Ö·û´®£¬Ö¸¶¨»æÍ¼Ä¿±êµ÷ÓÃsettarget
+void EGEAPI xyprintf(int x, int y, LPCWSTR fmt, ...); // ÔÚÖ¸¶¨Î»ÖÃÊä³ö¸ñÊ½»¯×Ö·û´®£¬Ö¸¶¨»æÍ¼Ä¿±êµ÷ÓÃsettarget
+void EGEAPI rectprintf(int x, int y, int w, int h, LPCSTR  fmt, ...); // ÔÚÖ¸¶¨¾ØĞÎÊä³ö¸ñÊ½»¯×Ö·û´®£¬Ö¸¶¨»æÍ¼Ä¿±êµ÷ÓÃsettarget
+void EGEAPI rectprintf(int x, int y, int w, int h, LPCWSTR fmt, ...); // ÔÚÖ¸¶¨¾ØĞÎÊä³ö¸ñÊ½»¯×Ö·û´®£¬Ö¸¶¨»æÍ¼Ä¿±êµ÷ÓÃsettarget
+int  EGEAPI textwidth(LPCSTR  textstring, PIMAGE pimg = NULL);                 // »ñÈ¡×Ö·û´®Õ¼ÓÃµÄÏñËØ¿í
+int  EGEAPI textwidth(LPCWSTR textstring, PIMAGE pimg = NULL);                 // »ñÈ¡×Ö·û´®Õ¼ÓÃµÄÏñËØ¿í
 int  EGEAPI textwidth(CHAR  c, PIMAGE pimg = NULL);
 int  EGEAPI textwidth(WCHAR c, PIMAGE pimg = NULL);
-int  EGEAPI textheight(LPCSTR  textstring, PIMAGE pimg = NULL);                // è·å–å­—ç¬¦ä¸²å ç”¨çš„åƒç´ é«˜
-int  EGEAPI textheight(LPCWSTR textstring, PIMAGE pimg = NULL);                // è·å–å­—ç¬¦ä¸²å ç”¨çš„åƒç´ é«˜
+int  EGEAPI textheight(LPCSTR  textstring, PIMAGE pimg = NULL);                // »ñÈ¡×Ö·û´®Õ¼ÓÃµÄÏñËØ¸ß
+int  EGEAPI textheight(LPCWSTR textstring, PIMAGE pimg = NULL);                // »ñÈ¡×Ö·û´®Õ¼ÓÃµÄÏñËØ¸ß
 int  EGEAPI textheight(CHAR  c, PIMAGE pimg = NULL);
 int  EGEAPI textheight(WCHAR c, PIMAGE pimg = NULL);
 void EGEAPI settextjustify(int horiz, int vert, PIMAGE pimg = NULL);
 
-// è®¾ç½®å½“å‰å­—ä½“æ ·å¼(è¯¦è§å¸®åŠ©)
-//      nHeight: å­—ç¬¦çš„å¹³å‡é«˜åº¦ï¼›
-//      nWidth: å­—ç¬¦çš„å¹³å‡å®½åº¦(0 è¡¨ç¤ºè‡ªé€‚åº”)ï¼›
-//      lpszFace: å­—ä½“åç§°ï¼›
-//      nEscapement: å­—ç¬¦ä¸²çš„ä¹¦å†™è§’åº¦(å•ä½ 0.1 åº¦)ï¼›
-//      nOrientation: æ¯ä¸ªå­—ç¬¦çš„ä¹¦å†™è§’åº¦(å•ä½ 0.1 åº¦)ï¼›
-//      nWeight: å­—ç¬¦çš„ç¬”ç”»ç²—ç»†(0 è¡¨ç¤ºé»˜è®¤ç²—ç»†)ï¼›
-//      bItalic: æ˜¯å¦æ–œä½“ï¼›
-//      bUnderline: æ˜¯å¦ä¸‹åˆ’çº¿ï¼›
-//      bStrikeOut: æ˜¯å¦åˆ é™¤çº¿ï¼›
-//      fbCharSet: æŒ‡å®šå­—ç¬¦é›†ï¼›
-//      fbOutPrecision: æŒ‡å®šæ–‡å­—çš„è¾“å‡ºç²¾åº¦ï¼›
-//      fbClipPrecision: æŒ‡å®šæ–‡å­—çš„å‰ªè¾‘ç²¾åº¦ï¼›
-//      fbQuality: æŒ‡å®šæ–‡å­—çš„è¾“å‡ºè´¨é‡ï¼›
-//      fbPitchAndFamily: æŒ‡å®šä»¥å¸¸è§„æ–¹å¼æè¿°å­—ä½“çš„å­—ä½“ç³»åˆ—ã€‚
+// ÉèÖÃµ±Ç°×ÖÌåÑùÊ½(Ïê¼û°ïÖú)
+//      nHeight: ×Ö·ûµÄÆ½¾ù¸ß¶È£»
+//      nWidth: ×Ö·ûµÄÆ½¾ù¿í¶È(0 ±íÊ¾×ÔÊÊÓ¦)£»
+//      lpszFace: ×ÖÌåÃû³Æ£»
+//      nEscapement: ×Ö·û´®µÄÊéĞ´½Ç¶È(µ¥Î» 0.1 ¶È)£»
+//      nOrientation: Ã¿¸ö×Ö·ûµÄÊéĞ´½Ç¶È(µ¥Î» 0.1 ¶È)£»
+//      nWeight: ×Ö·ûµÄ±Ê»­´ÖÏ¸(0 ±íÊ¾Ä¬ÈÏ´ÖÏ¸)£»
+//      bItalic: ÊÇ·ñĞ±Ìå£»
+//      bUnderline: ÊÇ·ñÏÂ»®Ïß£»
+//      bStrikeOut: ÊÇ·ñÉ¾³ıÏß£»
+//      fbCharSet: Ö¸¶¨×Ö·û¼¯£»
+//      fbOutPrecision: Ö¸¶¨ÎÄ×ÖµÄÊä³ö¾«¶È£»
+//      fbClipPrecision: Ö¸¶¨ÎÄ×ÖµÄ¼ô¼­¾«¶È£»
+//      fbQuality: Ö¸¶¨ÎÄ×ÖµÄÊä³öÖÊÁ¿£»
+//      fbPitchAndFamily: Ö¸¶¨ÒÔ³£¹æ·½Ê½ÃèÊö×ÖÌåµÄ×ÖÌåÏµÁĞ¡£
 void EGEAPI setfont(int nHeight, int nWidth, LPCSTR lpszFace,  PIMAGE pimg = NULL);
 void EGEAPI setfont(int nHeight, int nWidth, LPCWSTR lpszFace, PIMAGE pimg = NULL);
 void EGEAPI setfont(int nHeight, int nWidth, LPCSTR lpszFace,  int nEscapement, int nOrientation,
@@ -912,49 +867,50 @@ void EGEAPI setfont(int nHeight, int nWidth, LPCSTR lpszFace,  int nEscapement, 
 void EGEAPI setfont(int nHeight, int nWidth, LPCWSTR lpszFace, int nEscapement, int nOrientation,
 					int nWeight, int bItalic, int bUnderline, int bStrikeOut, BYTE fbCharSet,
 					BYTE fbOutPrecision, BYTE fbClipPrecision, BYTE fbQuality, BYTE fbPitchAndFamily, PIMAGE pimg = NULL);
-void EGEAPI setfont(const LOGFONTA *font, PIMAGE pimg = NULL); // è®¾ç½®å½“å‰å­—ä½“æ ·å¼
-void EGEAPI setfont(const LOGFONTW *font, PIMAGE pimg = NULL); // è®¾ç½®å½“å‰å­—ä½“æ ·å¼
-void EGEAPI getfont(LOGFONTA *font, PIMAGE pimg = NULL);       // è·å–å½“å‰å­—ä½“æ ·å¼
-void EGEAPI getfont(LOGFONTW *font, PIMAGE pimg = NULL);       // è·å–å½“å‰å­—ä½“æ ·å¼
+void EGEAPI setfont(const LOGFONTA *font, PIMAGE pimg = NULL); // ÉèÖÃµ±Ç°×ÖÌåÑùÊ½
+void EGEAPI setfont(const LOGFONTW *font, PIMAGE pimg = NULL); // ÉèÖÃµ±Ç°×ÖÌåÑùÊ½
+void EGEAPI getfont(LOGFONTA *font, PCIMAGE pimg = NULL);      // »ñÈ¡µ±Ç°×ÖÌåÑùÊ½
+void EGEAPI getfont(LOGFONTW *font, PCIMAGE pimg = NULL);      // »ñÈ¡µ±Ç°×ÖÌåÑùÊ½
 
 
-//å›¾ç‰‡å‡½æ•°
+//Í¼Æ¬º¯Êı
 #define getmaxx getwidth
 #define getmaxy getheight
 
-int EGEAPI getwidth(PIMAGE pimg = NULL);           // è·å–å›¾ç‰‡å®½åº¦
-int EGEAPI getheight(PIMAGE pimg = NULL);          // è·å–å›¾ç‰‡é«˜åº¦
-int EGEAPI getx(PIMAGE pimg = NULL);               // è·å–å½“å‰ x åæ ‡
-int EGEAPI gety(PIMAGE pimg = NULL);               // è·å–å½“å‰ y åæ ‡
+int EGEAPI getwidth(PCIMAGE pimg = NULL);          // »ñÈ¡Í¼Æ¬¿í¶È
+int EGEAPI getheight(PCIMAGE pimg = NULL);         // »ñÈ¡Í¼Æ¬¸ß¶È
+int EGEAPI getx(PCIMAGE pimg = NULL);              // »ñÈ¡µ±Ç° x ×ø±ê
+int EGEAPI gety(PCIMAGE pimg = NULL);              // »ñÈ¡µ±Ç° y ×ø±ê
 
-PIMAGE      EGEAPI newimage(); // åˆ›å»ºPIMAGE
-PIMAGE      EGEAPI newimage(int width, int height); // åˆ›å»ºPIMAGE
-void        EGEAPI delimage(PIMAGE pImg); // åˆ›å»ºPIMAGE
-color_t*    EGEAPI getbuffer(PIMAGE pImg);
+PIMAGE         EGEAPI newimage();                      // ´´½¨ PIMAGE
+PIMAGE         EGEAPI newimage(int width, int height); // ´´½¨ PIMAGE
+void           EGEAPI delimage(PCIMAGE pImg);          // É¾³ı PIMAGE
+color_t*       EGEAPI getbuffer(PIMAGE pImg);
+const color_t* EGEAPI getbuffer(PCIMAGE pImg);
 
-int  EGEAPI resize(PIMAGE pDstImg, int width, int height); //é‡è®¾å°ºå¯¸
-void EGEAPI getimage(PIMAGE pDstImg, int srcX, int srcY, int srcWidth, int srcHeight);             // ä»å±å¹•è·å–å›¾åƒ
-void EGEAPI getimage(PIMAGE pDstImg, const PIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight);   // ä»å¦ä¸€ä¸ª PIMAGE å¯¹è±¡ä¸­è·å–å›¾åƒ
-int  EGEAPI getimage(PIMAGE pDstImg, LPCSTR  pImgFile, int zoomWidth = 0, int zoomHeight = 0);     // ä»å›¾ç‰‡æ–‡ä»¶è·å–å›¾åƒ(bmp/jpg/gif/emf/wmf)
-int  EGEAPI getimage(PIMAGE pDstImg, LPCWSTR pImgFile, int zoomWidth = 0, int zoomHeight = 0);     // ä»å›¾ç‰‡æ–‡ä»¶è·å–å›¾åƒ(bmp/jpg/gif/emf/wmf)
-int  EGEAPI getimage(PIMAGE pDstImg, LPCSTR  pResType, LPCSTR  pResName, int zoomWidth = 0, int zoomHeight = 0);   // ä»èµ„æºæ–‡ä»¶è·å–å›¾åƒ(bmp/jpg/gif/emf/wmf)
-int  EGEAPI getimage(PIMAGE pDstImg, LPCWSTR pResType, LPCWSTR pResName, int zoomWidth = 0, int zoomHeight = 0);   // ä»èµ„æºæ–‡ä»¶è·å–å›¾åƒ(bmp/jpg/gif/emf/wmf)
-void EGEAPI putimage(int dstX, int dstY, const PIMAGE pSrcImg, DWORD dwRop = SRCCOPY);                         // ç»˜åˆ¶å›¾åƒåˆ°å±å¹•
-void EGEAPI putimage(int dstX, int dstY, int dstWidth, int dstHeight, const PIMAGE pSrcImg, int srcX, int srcY, DWORD dwRop = SRCCOPY);    // ç»˜åˆ¶å›¾åƒåˆ°å±å¹•(æŒ‡å®šå®½é«˜)
-void EGEAPI putimage(int dstX, int dstY, int dstWidth, int dstHeight, const PIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight, DWORD dwRop = SRCCOPY);   // ç»˜åˆ¶å›¾åƒåˆ°å±å¹•(æŒ‡å®šæºå®½é«˜å’Œç›®æ ‡å®½é«˜è¿›è¡Œæ‹‰ä¼¸)
-void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, const PIMAGE pSrcImg, DWORD dwRop = SRCCOPY);         // ç»˜åˆ¶å›¾åƒåˆ°å¦ä¸€å›¾åƒä¸­
-void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, int dstWidth, int dstHeight, const PIMAGE pSrcImg, int srcX, int srcY, DWORD dwRop = SRCCOPY);    // ç»˜åˆ¶å›¾åƒåˆ°å¦ä¸€å›¾åƒä¸­(æŒ‡å®šå®½é«˜)
-void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, int dstWidth, int dstHeight, const PIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight, DWORD dwRop = SRCCOPY);   // ç»˜åˆ¶å›¾åƒåˆ°å¦ä¸€å›¾åƒä¸­(æŒ‡å®šæºå®½é«˜å’Œç›®æ ‡å®½é«˜è¿›è¡Œæ‹‰ä¼¸)
-int  EGEAPI saveimage(PIMAGE pimg, LPCSTR  filename);
-int  EGEAPI saveimage(PIMAGE pimg, LPCWSTR filename);
-int  EGEAPI savepng(PIMAGE pimg, LPCSTR  filename, int bAlpha = 0);
-int  EGEAPI savepng(PIMAGE pimg, LPCWSTR filename, int bAlpha = 0);
+int  EGEAPI resize(PIMAGE pDstImg, int width, int height); //ÖØÉè³ß´ç
+void EGEAPI getimage(PIMAGE pDstImg, int srcX, int srcY, int srcWidth, int srcHeight);                             // ´ÓÆÁÄ»»ñÈ¡Í¼Ïñ
+void EGEAPI getimage(PIMAGE pDstImg, PCIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight);            // ´ÓÁíÒ»¸ö PIMAGE ¶ÔÏóÖĞ»ñÈ¡Í¼Ïñ
+int  EGEAPI getimage(PIMAGE pDstImg, LPCSTR  pImgFile, int zoomWidth = 0, int zoomHeight = 0);                     // ´ÓÍ¼Æ¬ÎÄ¼ş»ñÈ¡Í¼Ïñ(bmp/jpg/gif/emf/wmf)
+int  EGEAPI getimage(PIMAGE pDstImg, LPCWSTR pImgFile, int zoomWidth = 0, int zoomHeight = 0);                     // ´ÓÍ¼Æ¬ÎÄ¼ş»ñÈ¡Í¼Ïñ(bmp/jpg/gif/emf/wmf)
+int  EGEAPI getimage(PIMAGE pDstImg, LPCSTR  pResType, LPCSTR  pResName, int zoomWidth = 0, int zoomHeight = 0);   // ´Ó×ÊÔ´ÎÄ¼ş»ñÈ¡Í¼Ïñ(bmp/jpg/gif/emf/wmf)
+int  EGEAPI getimage(PIMAGE pDstImg, LPCWSTR pResType, LPCWSTR pResName, int zoomWidth = 0, int zoomHeight = 0);   // ´Ó×ÊÔ´ÎÄ¼ş»ñÈ¡Í¼Ïñ(bmp/jpg/gif/emf/wmf)
+void EGEAPI putimage(int dstX, int dstY, PCIMAGE pSrcImg, DWORD dwRop = SRCCOPY);                                  // »æÖÆÍ¼Ïñµ½ÆÁÄ»
+void EGEAPI putimage(int dstX, int dstY, int dstWidth, int dstHeight, PCIMAGE pSrcImg, int srcX, int srcY, DWORD dwRop = SRCCOPY);                                // »æÖÆÍ¼Ïñµ½ÆÁÄ»(Ö¸¶¨¿í¸ß)
+void EGEAPI putimage(int dstX, int dstY, int dstWidth, int dstHeight, PCIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight, DWORD dwRop = SRCCOPY);   // »æÖÆÍ¼Ïñµ½ÆÁÄ»(Ö¸¶¨Ô´¿í¸ßºÍÄ¿±ê¿í¸ß½øĞĞÀ­Éì)
+void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, PCIMAGE pSrcImg, DWORD dwRop = SRCCOPY);                                                                 // »æÖÆÍ¼Ïñµ½ÁíÒ»Í¼ÏñÖĞ
+void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, int dstWidth, int dstHeight, PCIMAGE pSrcImg, int srcX, int srcY, DWORD dwRop = SRCCOPY);                // »æÖÆÍ¼Ïñµ½ÁíÒ»Í¼ÏñÖĞ(Ö¸¶¨¿í¸ß)
+void EGEAPI putimage(PIMAGE pDstImg, int dstX, int dstY, int dstWidth, int dstHeight, PCIMAGE pSrcImg, int srcX, int srcY, int srcWidth, int srcHeight, DWORD dwRop = SRCCOPY);   // »æÖÆÍ¼Ïñµ½ÁíÒ»Í¼ÏñÖĞ(Ö¸¶¨Ô´¿í¸ßºÍÄ¿±ê¿í¸ß½øĞĞÀ­Éì)
+int  EGEAPI saveimage(PCIMAGE pimg, LPCSTR  filename);
+int  EGEAPI saveimage(PCIMAGE pimg, LPCWSTR filename);
+int  EGEAPI savepng(PCIMAGE pimg, LPCSTR  filename, int bAlpha = 0);
+int  EGEAPI savepng(PCIMAGE pimg, LPCWSTR filename, int bAlpha = 0);
 int  EGEAPI getimage_pngfile(PIMAGE pimg, LPCSTR  filename);
 int  EGEAPI getimage_pngfile(PIMAGE pimg, LPCWSTR filename);
 
 int EGEAPI putimage_transparent(
 	PIMAGE imgdest,         // handle to dest
-	PIMAGE imgsrc,          // handle to source
+	PCIMAGE imgsrc,         // handle to source
 	int nXOriginDest,       // x-coord of destination upper-left corner
 	int nYOriginDest,       // y-coord of destination upper-left corner
 	color_t crTransparent,  // color to make transparent
@@ -965,7 +921,7 @@ int EGEAPI putimage_transparent(
 );
 int EGEAPI putimage_alphablend(
 	PIMAGE imgdest,         // handle to dest
-	PIMAGE imgsrc,          // handle to source
+	PCIMAGE imgsrc,         // handle to source
 	int nXOriginDest,       // x-coord of destination upper-left corner
 	int nYOriginDest,       // y-coord of destination upper-left corner
 	unsigned char alpha,    // alpha
@@ -976,7 +932,7 @@ int EGEAPI putimage_alphablend(
 );
 int EGEAPI putimage_alphatransparent(
 	PIMAGE imgdest,         // handle to dest
-	PIMAGE imgsrc,          // handle to source
+	PCIMAGE imgsrc,         // handle to source
 	int nXOriginDest,       // x-coord of destination upper-left corner
 	int nYOriginDest,       // y-coord of destination upper-left corner
 	color_t crTransparent,  // color to make transparent
@@ -988,13 +944,24 @@ int EGEAPI putimage_alphatransparent(
 );
 int EGEAPI putimage_withalpha(
 	PIMAGE imgdest,         // handle to dest
-	PIMAGE imgsrc,          // handle to source
+	PCIMAGE imgsrc,         // handle to source
 	int nXOriginDest,       // x-coord of destination upper-left corner
 	int nYOriginDest,       // y-coord of destination upper-left corner
 	int nXOriginSrc = 0,    // x-coord of source upper-left corner
 	int nYOriginSrc = 0,    // y-coord of source upper-left corner
 	int nWidthSrc = 0,      // width of source rectangle
 	int nHeightSrc = 0      // height of source rectangle
+);
+int EGEAPI putimage_alphafilter(
+	PIMAGE imgdest,         // handle to dest
+	PCIMAGE imgsrc,         // handle to source
+	int nXOriginDest,       // x-coord of destination upper-left corner
+	int nYOriginDest,       // y-coord of destination upper-left corner
+	PCIMAGE imgalpha,       // alpha
+	int nXOriginSrc,        // x-coord of source upper-left corner
+	int nYOriginSrc,        // y-coord of source upper-left corner
+	int nWidthSrc,          // width of source rectangle
+	int nHeightSrc          // height of source rectangle
 );
 int EGEAPI imagefilter_blurring (
 	PIMAGE imgdest,         // handle to dest
@@ -1007,262 +974,63 @@ int EGEAPI imagefilter_blurring (
 );
 int EGEAPI putimage_rotate(
 	PIMAGE imgdest,
-	PIMAGE imgtexture,
+	PCIMAGE imgtexture,
 	int nXOriginDest,
 	int nYOriginDest,
 	float centerx,
 	float centery,
 	float radian,
-	int btransparent = 0,           // transparent (1) or not (0)
+	int btransparent = 0,            // transparent (1) or not (0)
 	int alpha = -1,                  // in range[0, 256], alpha== -1 means no alpha
 	int smooth = 0
 );
 
 int EGEAPI putimage_rotatezoom(
 	PIMAGE imgdest,
-	PIMAGE imgtexture,
+	PCIMAGE imgtexture,
 	int nXOriginDest,
 	int nYOriginDest,
 	float centerx,
 	float centery,
 	float radian,
 	float zoom,
-	int btransparent = 0,           // transparent (1) or not (0)
+	int btransparent = 0,            // transparent (1) or not (0)
 	int alpha = -1,                  // in range[0, 256], alpha== -1 means no alpha
 	int smooth = 0
 );
 
-class PushTarget {
-public:
-	PushTarget() { m_target = gettarget(); }
-	PushTarget(PIMAGE target) { m_target = gettarget(); settarget(target); }
-	~PushTarget() { settarget(m_target); }
-private:
-	PIMAGE m_target;
-};
 
-#define CTL_PREINIT(classname, parent) \
-	struct preinit_obj { \
-		preinit_obj(classname* This, int inheritlevel) { \
-			This->pre_init(inheritlevel); \
-		} \
-	}_preinit_obj; \
-	enum inherit_e { inherit_level_e = parent::inherit_level_e + 1, }; \
-	static void firstinit(ege::egeControlBase* This) { \
-		((classname*)This)->m_inheritlevel = 1; \
-	} \
-	void pre_init(int inheritlevel) {\
-		(void)inheritlevel;
+// ÆäËüº¯Êı
 
-#define CTL_PREINITEND  }
-#define CTL_DEFPARAM    int inherit = inherit_level_e, ege::egeControlBase* pParent = NULL
-#define CTL_INITBASE(parent)    _preinit_obj(this, inherit_level_e), parent(inherit, (ege::egeControlBase*)pParent)
-#define CTL_INIT        InitObject iobj(this, inherit_level_e);\
-						ege::PushTarget _pushtarget(buf());
-
-#define EGECTRL_INITEND()     }
-
-class egeControlBase
-{
-public:
-	enum ROP {
-		COPY    = SRCCOPY,
-		XOR     = SRCINVERT,
-		AND     = SRCAND,
-		OR      = SRCPAINT,
-	};
-	enum blendmode_e {
-		SOLIDCOPY = 0,
-		ALPHABLEND = 1,
-	};
-	enum inherit_e {
-		inherit_level_e = 0,
-	};
-	// æ„é€ å‡½æ•°å¯ä»¥è‡ªå®šä¹‰ï¼Œä½†è¦æŒ‰éœ€è¦é€‰æ‹©ä½¿ä¸ä½¿ç”¨å®ï¼Œè¯¦è§å‰é¢ä»£ç æˆ–è€…æ–‡æ¡£ç¤ºä¾‹ä»£ç 
-	egeControlBase();
-	egeControlBase(int inherit, egeControlBase* pParent);
-	~egeControlBase();
-
-	// ä»¥ä¸‹è™šå‡½æ•°éƒ½ä¸è¦ç›´æ¥ç›¸äº’è°ƒç”¨
-	virtual LRESULT onMessage(UINT message, WPARAM wParam, LPARAM lParam) { (void)message; (void)wParam; (void)lParam; return 0; }
-	// ä»¥ä¸‹å‡½æ•°å¦‚æœè¿”å›é0åˆ™ä¸å‘å­æ§ä»¶ä¼ é€’é”®ç›˜é¼ æ ‡æ¶ˆæ¯
-	virtual int  onMouse(int x, int y, int flag) { (void)x; (void)y; (void)flag; return 0; }
-	virtual int  onKeyDown(int key, int flag) { (void)key; (void)flag; return 0; }
-	virtual int  onKeyUp(int key, int flag) { (void)key; (void)flag; return 0; }
-	virtual int  onKeyChar(int key, int flag) { (void)key; (void)flag; return 0; }
-	// å±å¹•æ›´æ–°åä¼šè¢«è°ƒç”¨ï¼Œç”¨äºæ›´æ–°é€»è¾‘
-	virtual int  onUpdate() { return 0; }
-	// ä»¥ä¸‹GetFocusåœ¨è¦è·å¾—ç„¦ç‚¹æ—¶è°ƒç”¨ï¼Œè¿”å›å€¼ä¸€èˆ¬è¿”å›0è¡¨ç¤ºè·å–é”®ç›˜è¾“å…¥ç„¦ç‚¹ï¼Œè¿”å›é0æ”¾å¼ƒè·å¾—è¾“å…¥ç„¦ç‚¹
-	virtual int  onGetFocus() { return 0; }
-	// å¤±å»è¾“å…¥ç„¦ç‚¹æ—¶è°ƒç”¨
-	virtual void onLostFocus() { }
-	// è®¾ç½®å°ºå¯¸å‰è°ƒç”¨ï¼Œè‡ªå®šä¹‰ä¿®æ­£å‡½æ•°
-	virtual void onSizing(int *w, int *h) { (void)w; (void)h; }
-	// å“åº”å°ºå¯¸å˜åŒ–å‡½æ•°
-	virtual void onSize(int w, int h) { (void)w; (void)h; }
-	// é‡ç»˜å‡½æ•°ï¼Œå°½é‡è¯·ç”»åˆ°pimgä¸Šï¼Œä»¥ä¾¿èƒ½æ§åˆ¶ç»˜ç”»ç›®æ ‡
-	virtual void onDraw(PIMAGE pimg) const { (void)pimg; }
-	// å°ºå¯¸å˜åŒ–æ—¶è°ƒç”¨ï¼Œç”¨äºé‡ç”»è¿‡æ»¤ç¼“å†²åŒºå†…å®¹
-	virtual void onResetFilter() {
-		setbkcolor(BLACK, m_mainFilter);
-		cleardevice(m_mainFilter);
-	}
-	virtual void onAddChild(egeControlBase* pChild) { (void)pChild; }
-	virtual void onDelChild(egeControlBase* pChild) { (void)pChild; }
-	virtual void onIdle() {} // ä¿ç•™æ¥å£ï¼Œæœªç”¨
-	// è¿™é‡Œä»¥ä¸Šçš„å‡½æ•°å¯ä»¥è‡ªè¡Œå®šä¹‰ï¼ˆæ³¨æ„å£°æ˜è¦ä¸€è‡´ï¼Œä¸è¦æ¼æ‰OnDrawé‡Œçš„constï¼‰
-	// è¿™é‡Œä»¥ä¸‹çš„publicå‡½æ•°å¯ä»¥è°ƒç”¨ï¼Œä¸å¯è‡ªå®šä¹‰ï¼Œä»»ä½•é¢„å®šä¹‰å˜é‡éƒ½ä¸è¦ç›´æ¥è®¿é—®ï¼Œè¯·ä½¿ç”¨é¢„å®šä¹‰å‡½æ•°æ¥æ§åˆ¶
-public:
-	PIMAGE buf() { return m_mainbuf; }
-	PIMAGE filter() { return m_mainFilter; }
-	egeControlBase* parent() { return m_parent; }
-	PIMAGE buf() const { return m_mainbuf; }
-	PIMAGE filter() const { return m_mainFilter; }
-	const egeControlBase* parent() const { return m_parent; }
-
-	void blendmode(int mode) { m_AlphablendMode = mode; }
-	void setrop(int rop) { m_rop = rop; } // è¯·ç”¨æšä¸¾ç±»å‹ROPé‡Œæ‰€å®šä¹‰çš„
-
-	void directdraw(bool bdraw) { m_bDirectDraw = (bdraw ? 1 : 0); }
-	bool isdirectdraw() const { return (m_bDirectDraw != 0); }
-	void autoredraw(bool bautoredraw)  { m_bAutoDraw = (bautoredraw ? 1 : 0); }
-	bool isautoredraw() const       { return (m_bAutoDraw != 0); }
-	void visable(bool bvisable)     { m_bVisable = (bvisable ? 1 : 0); }
-	bool isvisable() const          { return (m_bVisable != 0); }
-	void enable(bool benable)       { m_bEnable = (benable ? 1 : 0); }
-	bool isenable() const           { return (m_bEnable != 0); }
-	void capture(bool bcapture)     { m_bCapture = (bcapture ? 1 : 0); }
-	bool iscapture() const          { return (m_bCapture != 0); }
-	void capmouse(bool bcapmouse)   { m_bCapMouse = (bcapmouse ? 1 : 0); }
-	bool iscapmouse() const         { return (m_bCapMouse != 0); }
-	bool isfocus() const            { return (m_bInputFocus != 0); }
-	void move(int x, int y)         { m_x = x; m_y = y; }
-	void size(int w, int h) {
-		onSizing(&w, &h);
-		m_w = w; m_h = h;
-		resize(m_mainbuf, w, h);
-		resize(m_mainFilter, w, h);
-		onSize(w, h);
-		onResetFilter();
-	}
-	void zorderup();
-	void zorderdown();
-	void zorderset(int z);
-
-	int getx()      const { return m_x; }
-	int gety()      const { return m_y; }
-	int getw()      const { return m_w; }
-	int geth()      const { return m_h; }
-	int width()     const { return m_w; }
-	int height()    const { return m_h; }
-
-	int  addchild(egeControlBase* pChild);
-	int  delchild(egeControlBase* pChild);
-	void draw(PIMAGE pimg);
-	void update();
-	void mouse(int x, int y, int flag);
-	void keymsgdown(unsigned key, int flag);
-	void keymsgup(unsigned key, int flag);
-	void keymsgchar(unsigned key, int flag);
-	bool operator < (const egeControlBase& pbase) const {
-		if (m_zOrderLayer != pbase.m_zOrderLayer)
-			return m_zOrderLayer < pbase.m_zOrderLayer;
-		if (m_zOrder == pbase.m_zOrder)
-			return this < &pbase;
-		else
-			return m_zOrder < pbase.m_zOrder;
-	}
-protected:
-	int allocId();
-	int allocZorder();
-	class InitObject {
-	public:
-		InitObject(egeControlBase* pThis, int inherit_level);
-		~InitObject();
-	private:
-		egeControlBase* m_this;
-		int m_inherit_level;
-	};
-	void (* m_preinit_func )(egeControlBase*);
-private:
-	void init(egeControlBase* parent);
-	void fixzorder();
-	void sortzorder();
-#if _MSC_VER <= 1200
-public:
-#endif
-	void initok();
-private:
-	PIMAGE   m_mainbuf;      // ä¸»ç¼“å†²
-	PIMAGE   m_mainFilter;   // è¿‡æ»¤å™¨
-
-private:
-	int m_bVisable;     // æ˜¯å¦å¯è§
-	int m_bEnable;      // æ˜¯å¦å¯è·å¾—è¾“å…¥ï¼ˆé”®ç›˜å’Œé¼ æ ‡ï¼‰
-	int m_bAutoDraw;    // æ˜¯å¦è‡ªåŠ¨ç»˜ç”»åˆ°çª—å£ä¸Š
-	int m_bCapture;     // æ˜¯å¦å¯è·å¾—é”®ç›˜è¾“å…¥ç„¦ç‚¹
-	int m_bInputFocus;  // æ˜¯å¦å·²ç»è·å¾—è¾“å…¥ç„¦ç‚¹
-	int m_bCapMouse;    // æ˜¯å¦æ•æ‰é¼ æ ‡ï¼ˆå³ä½¿ä¸åœ¨æ‰€åœ¨åŒºåŸŸå†…ï¼‰
-	int m_zOrderLayer;  // Zæ¬¡åºå±‚ï¼ˆå€¼è¾ƒå¤§è€…åœ¨å‰ï¼Œå€¼è¾ƒå°è€…ä¼šè¢«å…¶å®ƒæ§ä»¶é®æŒ¡ï¼‰
-	int m_zOrder;       // Zæ¬¡åºï¼ˆå€¼è¾ƒå¤§è€…åœ¨å‰ï¼Œå€¼è¾ƒå°è€…ä¼šè¢«å…¶å®ƒæ§ä»¶é®æŒ¡ï¼‰
-	int m_allocId;      // åˆ†é…id
-	int m_allocZorder;  // åˆ†é…Zæ¬¡åº
-
-	egeControlBase* m_parent;
-	static int s_maxchildid;   // ä¸‹ä¸€æ¬¡å­æ§ä»¶åˆ†é…IDå€¼
-
-#ifdef _GRAPH_LIB_BUILD_
-public:
-#else
-private:
-#endif
-	void* m_childmap;       // å­æ§ä»¶
-	void* m_childzorder;    // å­æ§ä»¶æ’åº
-
-protected:
-	int m_x, m_y;       // å·¦ä¸Šè§’åæ ‡
-	int m_w, m_h;       // å®½é«˜
-
-protected:
-	DWORD   m_rop;              // æ··åˆæ–¹å¼
-	int     m_AlphablendMode;   // ç»˜ç”»æ··åˆè¿‡æ»¤æ–¹å¼
-	int     m_bDirectDraw;      // å¯ç”¨ç›´æ¥ç»˜ç”»
-#if _MSC_VER <= 1200
-public:
-#endif
-	int     m_inheritlevel;     // ç»§æ‰¿å±‚æ¬¡
-};
-
-// å…¶å®ƒå‡½æ•°
-
-HWND        EGEAPI getHWnd();         // è·å–ç»˜å›¾çª—å£å¥æŸ„
+HWND        EGEAPI getHWnd();         // »ñÈ¡»æÍ¼´°¿Ú¾ä±ú
 HINSTANCE   EGEAPI getHInstance();
-PVOID       EGEAPI getProcfunc();
-int         EGEAPI getGraphicsVer();   // è·å–å½“å‰ç‰ˆæœ¬ ###
-float       EGEAPI getfps(); // è·å–å½“å‰å¸§ç‡
+HDC         EGEAPI getHDC(PCIMAGE pImg = NULL);
 
-//éšæœºå‡½æ•°
+PVOID       EGEAPI getProcfunc();
+int         EGEAPI getGraphicsVer();   // »ñÈ¡µ±Ç°°æ±¾
+float       EGEAPI getfps();           // »ñÈ¡µ±Ç°Ö¡ÂÊ
+
+//Ëæ»úº¯Êı
 void            EGEAPI randomize();
 unsigned int    EGEAPI random(unsigned int n);
 double          EGEAPI randomf();
 
-//é«˜çº§è¾“å…¥å‡½æ•°
-// title å¯¹è¯æ¡†æ ‡é¢˜ï¼Œ text å¯¹è¯æ¡†æç¤ºæ–‡å­—ï¼Œ bufæ¥æ”¶è¾“å…¥æ•°æ®çš„å­—ç¬¦ä¸²æŒ‡é’ˆï¼Œ lenæŒ‡å‡ºbufçš„æœ€å¤§é•¿åº¦ï¼Œä¹ŸåŒæ—¶ä¼šé™åˆ¶è¾“å…¥å†…å®¹é•¿åº¦
-int EGEAPI inputbox_getline(LPCSTR  title, LPCSTR  text, LPSTR  buf, int len);  //å¼¹å‡ºå¯¹è¯æ¡†ï¼Œè®©ç”¨æˆ·è¾“å…¥ï¼Œå½“å‰ç¨‹åºè¿è¡Œæš‚åœï¼Œè¿”å›é0è¡¨ç¤ºè¾“å…¥æœ‰æ•ˆï¼Œ0ä¸ºæ— æ•ˆ
-int EGEAPI inputbox_getline(LPCWSTR title, LPCWSTR text, LPWSTR buf, int len);  //å¼¹å‡ºå¯¹è¯æ¡†ï¼Œè®©ç”¨æˆ·è¾“å…¥ï¼Œå½“å‰ç¨‹åºè¿è¡Œæš‚åœï¼Œè¿”å›é0è¡¨ç¤ºè¾“å…¥æœ‰æ•ˆï¼Œ0ä¸ºæ— æ•ˆ
+//¸ß¼¶ÊäÈëº¯Êı
+// title ¶Ô»°¿ò±êÌâ£¬ text ¶Ô»°¿òÌáÊ¾ÎÄ×Ö£¬ buf½ÓÊÕÊäÈëÊı¾İµÄ×Ö·û´®Ö¸Õë£¬ lenÖ¸³öbufµÄ×î´ó³¤¶È£¬Ò²Í¬Ê±»áÏŞÖÆÊäÈëÄÚÈİ³¤¶È
+int EGEAPI inputbox_getline(LPCSTR  title, LPCSTR  text, LPSTR  buf, int len);  //µ¯³ö¶Ô»°¿ò£¬ÈÃÓÃ»§ÊäÈë£¬µ±Ç°³ÌĞòÔËĞĞÔİÍ££¬·µ»Ø·Ç0±íÊ¾ÊäÈëÓĞĞ§£¬0ÎªÎŞĞ§
+int EGEAPI inputbox_getline(LPCWSTR title, LPCWSTR text, LPWSTR buf, int len);  //µ¯³ö¶Ô»°¿ò£¬ÈÃÓÃ»§ÊäÈë£¬µ±Ç°³ÌĞòÔËĞĞÔİÍ££¬·µ»Ø·Ç0±íÊ¾ÊäÈëÓĞĞ§£¬0ÎªÎŞĞ§
 
 
-//é”®ç›˜å¤„ç†å‡½æ•°
+//¼üÅÌ´¦Àíº¯Êı
 int     EGEAPI kbmsg();
 key_msg EGEAPI getkey();
 EGE_DEPRECATE(getchEx)
 int     EGEAPI getchEx(int flag);
 EGE_DEPRECATE(kbhitEx)
 int     EGEAPI kbhitEx(int flag);
-int     EGEAPI keystate(int key);       // è·å¾—é”®ç ä¸ºkeyçš„é”®ï¼ˆè§key_code_eï¼‰æ˜¯å¦æŒ‰ä¸‹ï¼Œå¦‚æœkeyä½¿ç”¨é¼ æ ‡æŒ‰é”®çš„é”®ç ï¼Œåˆ™è·å¾—çš„æ˜¯é¼ æ ‡é”®çŠ¶æ€
-void    EGEAPI flushkey();              // æ¸…ç©ºé”®ç›˜æ¶ˆæ¯ç¼“å†²åŒº
+int     EGEAPI keystate(int key);       // »ñµÃ¼üÂëÎªkeyµÄ¼ü£¨¼ûkey_code_e£©ÊÇ·ñ°´ÏÂ£¬Èç¹ûkeyÊ¹ÓÃÊó±ê°´¼üµÄ¼üÂë£¬Ôò»ñµÃµÄÊÇÊó±ê¼ü×´Ì¬
+void    EGEAPI flushkey();              // Çå¿Õ¼üÅÌÏûÏ¢»º³åÇø
 
-//#ifndef _GRAPH_LIB_BUILD_
 #if !defined(_INC_CONIO) && !defined(_CONIO_H_)
 #define _INC_CONIO
 #define _CONIO_H_
@@ -1272,17 +1040,16 @@ int EGEAPI kbhit();
 #define getch getchEx
 #define kbhit kbhitEx
 #endif
-//#endif
 
-//é¼ æ ‡å¤„ç†å‡½æ•°
-int         EGEAPI mousemsg();                  // æ£€æŸ¥æ˜¯å¦å­˜åœ¨é¼ æ ‡æ¶ˆæ¯
-mouse_msg   EGEAPI getmouse();                  // è·å–ä¸€ä¸ªé¼ æ ‡æ¶ˆæ¯ã€‚å¦‚æœæ²¡æœ‰ï¼Œå°±ç­‰å¾…
+//Êó±ê´¦Àíº¯Êı
+int         EGEAPI mousemsg();                  // ¼ì²éÊÇ·ñ´æÔÚÊó±êÏûÏ¢
+mouse_msg   EGEAPI getmouse();                  // »ñÈ¡Ò»¸öÊó±êÏûÏ¢¡£Èç¹ûÃ»ÓĞ£¬¾ÍµÈ´ı
 EGE_DEPRECATE(GetMouseMsg)
-MOUSEMSG    EGEAPI GetMouseMsg();               // ï¼ˆä¸æ¨èä½¿ç”¨çš„å‡½æ•°ï¼‰è·å–ä¸€ä¸ªé¼ æ ‡æ¶ˆæ¯ã€‚å¦‚æœæ²¡æœ‰ï¼Œå°±ç­‰å¾…
+MOUSEMSG    EGEAPI GetMouseMsg();               // £¨²»ÍÆ¼öÊ¹ÓÃµÄº¯Êı£©»ñÈ¡Ò»¸öÊó±êÏûÏ¢¡£Èç¹ûÃ»ÓĞ£¬¾ÍµÈ´ı
 
-void        EGEAPI flushmouse();                // æ¸…ç©ºé¼ æ ‡æ¶ˆæ¯ç¼“å†²åŒº
-int         EGEAPI showmouse(int bShow);        // è®¾ç½®æ˜¯å¦æ˜¾ç¤ºé¼ æ ‡
-int         EGEAPI mousepos(int *x, int *y); // è·å–å½“å‰é¼ æ ‡ä½ç½®
+void        EGEAPI flushmouse();                // Çå¿ÕÊó±êÏûÏ¢»º³åÇø
+int         EGEAPI showmouse(int bShow);        // ÉèÖÃÊÇ·ñÏÔÊ¾Êó±ê
+int         EGEAPI mousepos(int *x, int *y); // »ñÈ¡µ±Ç°Êó±êÎ»ÖÃ
 
 /*
 callback function define as:
@@ -1291,7 +1058,7 @@ msg: see 'enum message_event'
 key: keycode
 return zero means process this message, otherwise means pass it and then process with 'getkey' function
 */
-//int message_addkeyhandler(void* param, LPMSG_KEY_PROC func);        //è®¾ç½®é”®ç›˜å›è°ƒå‡½æ•°
+//int message_addkeyhandler(void* param, LPMSG_KEY_PROC func);        //ÉèÖÃ¼üÅÌ»Øµ÷º¯Êı
 /*
 callback function define as:
 int __stdcall on_msg_mouse(void* param, unsigned msg, int key, int x, int y);
@@ -1300,7 +1067,7 @@ key: see 'enum message_mouse', if msg==MSG_EVENT_WHELL, key is a int number that
 x,y: current mouse (x, y)
 return zero means process this message, otherwise means pass it and then process with 'GetMouseMsg' function
 */
-//int message_addmousehandler(void* param, LPMSG_MOUSE_PROC func);    //è®¾ç½®é¼ æ ‡å›è°ƒå‡½æ•°
+//int message_addmousehandler(void* param, LPMSG_MOUSE_PROC func);    //ÉèÖÃÊó±ê»Øµ÷º¯Êı
 int EGEAPI SetCloseHandler(LPCALLBACK_PROC func);
 
 
@@ -1316,34 +1083,34 @@ public:
 	DWORD OpenFile(LPCWSTR filepath);
 	DWORD Play(DWORD dwFrom = MUSIC_ERROR, DWORD dwTo = MUSIC_ERROR);
 	DWORD Pause();
-	DWORD Seek(DWORD dwTo); //æ’­æ”¾ä½ç½®å®šä½ï¼Œå•ä½ä¸ºms
+	DWORD Seek(DWORD dwTo); //²¥·ÅÎ»ÖÃ¶¨Î»£¬µ¥Î»Îªms
 	DWORD SetVolume(float value);
 	DWORD Close();
 	DWORD Stop();
 	DWORD GetPosition();
 	DWORD GetLength();
-	// ä»¥ä¸‹å‡½æ•°GetPlayStatusçš„è¿”å›å€¼ä¸ºä»¥ä¸‹ä¹‹ä¸€ï¼ˆæ„ä¹‰çœ‹åç¼€ï¼‰ï¼š
-	// MUSIC_MODE_NOT_OPEN   //æ²¡æœ‰æ­£ç¡®æ‰“å¼€
-	// MUSIC_MODE_NOT_READY  //è®¾å¤‡æ²¡å‡†å¤‡å¥½ ï¼ˆè¾ƒå°‘ä½¿ç”¨ï¼‰
-	// MUSIC_MODE_PAUSE  //æš‚åœä¸­
-	// MUSIC_MODE_PLAY   //æ­£åœ¨æ’­æ”¾
-	// MUSIC_MODE_STOP   //æˆåŠŸæ‰“å¼€åï¼Œæˆ–è€…æ’­æ”¾å®Œæ˜¯è¿™ä¸ªçŠ¶æ€
-	// MUSIC_MODE_OPEN   //æ‰“å¼€ä¸­ ï¼ˆè¾ƒå°‘ä½¿ç”¨ï¼‰
-	// MUSIC_MODE_SEEK   //å®šä½ä¸­ ï¼ˆè¾ƒå°‘ä½¿ç”¨ï¼‰
+	// ÒÔÏÂº¯ÊıGetPlayStatusµÄ·µ»ØÖµÎªÒÔÏÂÖ®Ò»£¨ÒâÒå¿´ºó×º£©£º
+	// MUSIC_MODE_NOT_OPEN   //Ã»ÓĞÕıÈ·´ò¿ª
+	// MUSIC_MODE_NOT_READY  //Éè±¸Ã»×¼±¸ºÃ £¨½ÏÉÙÊ¹ÓÃ£©
+	// MUSIC_MODE_PAUSE  //ÔİÍ£ÖĞ
+	// MUSIC_MODE_PLAY   //ÕıÔÚ²¥·Å
+	// MUSIC_MODE_STOP   //³É¹¦´ò¿ªºó£¬»òÕß²¥·ÅÍêÊÇÕâ¸ö×´Ì¬
+	// MUSIC_MODE_OPEN   //´ò¿ªÖĞ £¨½ÏÉÙÊ¹ÓÃ£©
+	// MUSIC_MODE_SEEK   //¶¨Î»ÖĞ £¨½ÏÉÙÊ¹ÓÃ£©
 	DWORD GetPlayStatus();
 private:
 	DWORD       m_DID;
 	PVOID       m_dwCallBack;
 };
 
-/* å‹ç¼©å‡½æ•° */
-/* å‹ç¼©æ—¶destç¼“å†²åŒºè¦ä¿è¯æœ€å°å¤§å°ä¸ºsourceLen * 1.001 + 16 */
-/* è°ƒç”¨compress/compress2å‰ï¼Œ*destLenå¿…é¡»æœ‰å€¼ï¼Œè¡¨ç¤ºdestç¼“å†²åŒºçš„æœ€å¤§å¤§å°ï¼Œè¿”å›æ—¶è¿™ä¸ªå€¼è¡¨ç¤ºå®é™…å¤§å° */
-/* compress2 çš„level ä»0-9ï¼Œ0ä¸å‹ç¼©ï¼Œ9æœ€å¤§å‹ç¼©ï¼Œcompresså‡½æ•°ä½¿ç”¨é»˜è®¤å€¼6 */
+/* Ñ¹Ëõº¯Êı */
+/* Ñ¹ËõÊ±dest»º³åÇøÒª±£Ö¤×îĞ¡´óĞ¡ÎªsourceLen * 1.001 + 16 */
+/* µ÷ÓÃcompress/compress2Ç°£¬*destLen±ØĞëÓĞÖµ£¬±íÊ¾dest»º³åÇøµÄ×î´ó´óĞ¡£¬·µ»ØÊ±Õâ¸öÖµ±íÊ¾Êµ¼Ê´óĞ¡ */
+/* compress2 µÄlevel ´Ó0-9£¬0²»Ñ¹Ëõ£¬9×î´óÑ¹Ëõ£¬compressº¯ÊıÊ¹ÓÃÄ¬ÈÏÖµ6 */
 int             EGEAPI ege_compress(void *dest, unsigned long *destLen, const void *source, unsigned long sourceLen);
 int             EGEAPI ege_compress2(void *dest, unsigned long *destLen, const void *source, unsigned long sourceLen, int level);
 int             EGEAPI ege_uncompress(void *dest, unsigned long *destLen, const void *source, unsigned long sourceLen);
-unsigned long   EGEAPI ege_uncompress_size(const void *source, unsigned long sourceLen); /* è¿”å›0è¡¨ç¤ºé”™è¯¯ï¼Œå…¶å®ƒè¡¨ç¤ºå¤§å° */
+unsigned long   EGEAPI ege_uncompress_size(const void *source, unsigned long sourceLen); /* ·µ»Ø0±íÊ¾´íÎó£¬ÆäËü±íÊ¾´óĞ¡ */
 
 NAMESPACE_EGE_R
 

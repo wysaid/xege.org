@@ -2,8 +2,10 @@
 #define _EGE_SYS_EDIT_H_
 
 #ifndef _EGE_H_
-#error include "fps.h" must after include "ege.h" or "graphics.h"
+#error include "sys_edit.h" must after include "ege.h" or "graphics.h"
 #endif
+
+#include "egecontrolbase.h"
 
 namespace ege {
 
@@ -19,11 +21,11 @@ public:
         m_hwnd = NULL;
     }
     ~sys_edit() {
-        destory();
+        destroy();
     }
     int create(bool multiline = false, int scrollbar = 2) {
         if (m_hwnd) {
-            destory();
+            destroy();
         }
         msg_createwindow msg = {NULL};
         msg.hEvent = ::CreateEvent(NULL, TRUE, FALSE, NULL);
@@ -55,13 +57,13 @@ public:
             char fontname[] = {'\xcb', '\xce', '\xcc', '\xe5', 0, 0};
             setfont(12, 6, fontname);
         }
-        visable(false);
+        visible(false);
 
         ::CloseHandle(msg.hEvent);
 
         return 0;
     }
-    int destory() {
+    int destroy() {
         if (m_hwnd) {
             msg_createwindow msg = {NULL};
             msg.hwnd = m_hwnd;
@@ -77,28 +79,10 @@ public:
         }
         return 0;
     }
-    LRESULT onMessage(UINT message, WPARAM wParam, LPARAM lParam) {
-        if (message == WM_CTLCOLOREDIT) {
-            HDC dc = (HDC)wParam;
-            HBRUSH br = ::CreateSolidBrush(RGBTOBGR(m_bgcolor));
-
-            ::SetBkColor(dc, RGBTOBGR(m_bgcolor));
-            ::SetTextColor(dc, RGBTOBGR(m_color));
-            ::DeleteObject(m_hBrush);
-            m_hBrush = br;
-            return (LRESULT)br;
-        //} else if (message == WM_SETFOCUS) {
-        //    int a = 0;
-        //    int b = 1;
-        //    return 0;
-        } else {
-            return ((LRESULT (CALLBACK *)(HWND, UINT, WPARAM, LPARAM))m_callback)(m_hwnd, message, wParam, lParam);
-        }
-        //return 0;
-    }
-    void visable(bool bvisable) {
-        egeControlBase::visable(bvisable);
-        ::ShowWindow(m_hwnd, (int)bvisable);
+    LRESULT onMessage(UINT message, WPARAM wParam, LPARAM lParam);
+    void visible(bool bvisible) {
+        egeControlBase::visible(bvisible);
+        ::ShowWindow(m_hwnd, (int)bvisible);
     }
     void setfont(int h, int w, LPCSTR fontface) {
         {
