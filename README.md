@@ -1,4 +1,4 @@
-# EGE 20.08 安装包
+# EGE 24.04 安装包
 
 - 安装教程 <https://xege.org/beginner-lesson-1.html>
 - IDE下载 <https://xege.org/install_and_config>
@@ -8,7 +8,7 @@
 
 ## 配置变更
 - 库文件名统一为 `graphics.lib` 或 `libgraphics.a`
-- 在 GCC 中使用 ege 库时，需要添加链接参数 `-lgraphics -lgdi32 -lgdiplus`
+- 在 GCC 中使用 ege 库时，需要链接 `libgraphics.a`, `libgdi32.a`, `libgdiplus.a` 库，参数为 `-lgraphics -lgdi32 -lgdiplus`
 
 ## 新特性
 
@@ -47,14 +47,14 @@
 ## 修复 BUG
 
 - 修复 inputbox_getline() 界面发黑的问题(20.08 引入)
-- 修复 sector 函数在半径小于等于20时出现绘制错误的问题
-- 修复 drawpoly 绘制闭合多边形时首尾连接点无拐角的问题
-- 修复 setinitmode() 无法改变窗口位置的问题 (20.08 引入)
+- 修复 sector() 函数在半径小于等于 20 时出现绘制错误的问题
+- 修复 drawpoly() 绘制闭合多边形时首尾连接点无拐角的问题
+- 修复 setinitmode() 无法改变窗口位置的问题(20.08 引入)
 - 修复初始化后 initgraph(-1, -1) 无法将窗口大小设置为全屏的问题
-- 修复 sys_edit的 isfocus() 函数不可用的问题
-- 修复 sys_edit 在调用 setfocus 后不显示光标的问题
+- 修复 sys_edit 的 isfocus() 函数不可用的问题
+- 修复 sys_edit 在调用 setfocus() 后不显示光标的问题
 - 修复初始化后鼠标初始位置不正确的问题
-- 修复 rgb2gray 未对做近似处理的问题
+- 修复 rgb2gray() 未对做近似处理的问题
 - 修复用户手动关闭窗口，不能马上退出的问题
 - 修复 delay_ms(0) 延时过长的问题，改为与 Sleep(0) 一致的行为(放弃剩余 CPU 时间片，其它线程执行后立即返回)
 - 修复角度不为0的文本在设置垂直居中时发生偏移的问题
@@ -62,14 +62,15 @@
 - 修复 ege_drawtext() 无法旋转的问题
 - 修复填充模式 EMPTY_FILL 不正确的问题
 - 修复矩形区域输出文本无法按照对齐方式正确的问题
-- 修复ege_drawtext()无法按照指定字体宽度输出文本的问题
+- 修复 ege_drawtext() 无法按照指定字体宽度输出文本的问题
 - 修复 outtext() 不更新当前点的问题
-- 纠正 HOME 键和END键的键码
+- 纠正 HOME 键和 END 键的键码
 - 修复设置视口后当前点没有移动至视口左上角的问题
-- 修复 putimage 系列函数在源矩形区域左上角不为(0,0) 且宽高使用默认值0时会发生越界的问题
+- 修复 putimage 系列函数在源矩形区域左上角不为 (0,0) 且宽高使用默认值0时会发生越界的问题
 - 修复设置视口后 GDI+ 绘图坐标系未移动至视口左上角的问题
 - VECTOR3D 的 GetAngel() 函数纠正为 GetAngle()
 - 修复 random() 无默认参数的问题
+- 修复 keystate 在打开文件对话窗口后失效的问题
 
 ## 功能调整
 - getimage() 返回值类型统一为 int, 表示是否成功读取图像
@@ -84,9 +85,9 @@
 - 调整文本垂直对齐方式的值
 - 为 GCC4.5 以上版本增加弃用信息
 - 线条连接点默认样式统一修改为尖角
-- color_t 恢复为与 uint32_t 一致的 unsigned int 类型(20.08 为 DWORD)
+- color_t 恢复为与 uint32_t 一致的 unsigned int 类型(20.08 改为 DWORD)
 
 ## 其它
-
+- 绘图性能优化(GDI+ 实现的图形绘制以及 GDI 的直线绘制)
 - 减少初次显示屏幕时的闪烁
 - 图片读取速度优化
